@@ -1,0 +1,405 @@
+<mxfile host="app.diagrams.net" modified="2026-11-04T16:35:00.000Z" agent="Hermes" version="24.0.0">
+  <diagram id="erd_terra_sdgs" name="ERD Terra SDGs">
+    <mxGraphModel dx="1900" dy="1300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1860" pageHeight="1220" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title Banner -->
+        <mxCell id="title_banner" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px; color: #1E251E;&quot;&gt;TERRA SDGs — PHYSICAL RELATIONAL SCHEMA (ERD)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px; color: #5E745D;&quot;&gt;MySQL Relational Model • 8 Core Entities • Crow's Foot Cardinality • Selaras dengan Desain Admin Figma&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="25" width="650" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;Legenda Notasi:&lt;/b&gt; &amp;nbsp;&amp;nbsp; &lt;font color=&quot;#5E745D&quot;&gt;&lt;b&gt;PK&lt;/b&gt; Primary Key&lt;/font&gt; &amp;nbsp;|&amp;nbsp; &lt;font color=&quot;#7B8E7A&quot;&gt;&lt;b&gt;FK&lt;/b&gt; Foreign Key&lt;/font&gt; &amp;nbsp;|&amp;nbsp; &lt;font color=&quot;#3E4D3E&quot;&gt;&lt;b&gt;UK&lt;/b&gt; Unique Key&lt;/font&gt; &amp;nbsp;|&amp;nbsp; &lt;b&gt;1 : 0..N&lt;/b&gt; Kardinalitas Crow's Foot" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F4F8F3;strokeColor=#C8D6C7;fontColor=#262E25;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="25" width="630" height="38" as="geometry" />
+        </mxCell>
+
+        <!-- Table EVENTS -->
+        <mxCell id="T_EVENTS" value="EVENTS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="380" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;slug&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_2" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;title&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;category&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;summary&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;description&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT (WYSIWYG)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;mode&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('tatap_muka','online')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;location_name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;location_address&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;location_map_url&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(500) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;start_date&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DATE&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;end_date&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DATE&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_12" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;start_time&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIME&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="320" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_13" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;end_time&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIME&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="344" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_14" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;quota&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="368" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_15" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;registered_count&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT DEFAULT 0&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="392" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_16" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;price&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DECIMAL(12,2) DEFAULT 0&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="416" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_17" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;registration_start&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="440" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_18" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;registration_end&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="464" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_19" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('draft','published','closed')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="488" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_20" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;image_path&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="512" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENTS_21" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENTS">
+          <mxGeometry y="536" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table EVENT_REGISTRATIONS -->
+        <mxCell id="T_EVENT_REGISTRATIONS" value="EVENT_REGISTRATIONS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="60" y="660" width="380" height="416" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_1" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;event_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT (CASCADE)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_2" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;user_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;full_name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;email&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;phone&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;date_of_birth&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DATE (Min 17 Thn)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;city&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;occupation&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;gender&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(20)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;interest&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;volunteer_experience&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_12" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('menunggu','dikonfirmasi','ditolak')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="320" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_13" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;check_in_status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('belum_checkin','sudah_checkin')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="344" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_14" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;checked_in_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="368" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_EVENT_REGISTRATIONS_15" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_EVENT_REGISTRATIONS">
+          <mxGeometry y="392" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table USERS -->
+        <mxCell id="T_USERS" value="USERS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="90" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;email&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_2" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;password&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255) (Bcrypt)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;role&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('admin','volunteer','donor')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;phone&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;city&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;occupation&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;gender&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(20)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;avatar_path&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;email_verified_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_USERS_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_USERS">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table ACTIVITY_LOGS -->
+        <mxCell id="T_ACTIVITY_LOGS" value="ACTIVITY_LOGS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="660" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_1" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;user_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_2" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;actor_name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;actor_role&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;ip_address&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(45)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;action&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;module&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;target_type&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;target_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;BIGINT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;details&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('Berhasil','Gagal')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ACTIVITY_LOGS_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP (WIB)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ACTIVITY_LOGS">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table ARTICLE_CATEGORIES -->
+        <mxCell id="T_ARTICLE_CATEGORIES" value="ARTICLE_CATEGORIES" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="940" y="90" width="380" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLE_CATEGORIES_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLE_CATEGORIES">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLE_CATEGORIES_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;slug&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLE_CATEGORIES">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLE_CATEGORIES_2" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLE_CATEGORIES">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLE_CATEGORIES_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;description&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLE_CATEGORIES">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLE_CATEGORIES_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLE_CATEGORIES">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table ARTICLES -->
+        <mxCell id="T_ARTICLES" value="ARTICLES" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="940" y="380" width="380" height="344" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;slug&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_2" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;category_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT (RESTRICT)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_3" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;author_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;title&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;author_name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;excerpt&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;body&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;LONGTEXT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;image_path&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;views_count&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT DEFAULT 0&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('draft','published','archived')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;published_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_ARTICLES_12" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_ARTICLES">
+          <mxGeometry y="320" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table DONATION_CAMPAIGNS -->
+        <mxCell id="T_DONATION_CAMPAIGNS" value="DONATION_CAMPAIGNS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="90" width="380" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;code&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_2" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_3" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;description&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;target_amount&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DECIMAL(15,2)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;collected_amount&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DECIMAL(15,2)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;is_active&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;BOOLEAN&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;image_path&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATION_CAMPAIGNS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATION_CAMPAIGNS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Table DONATIONS -->
+        <mxCell id="T_DONATIONS" value="DONATIONS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=32;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#5E745D;strokeColor=#475846;fontSize=12;swimlaneFillColor=#FFFFFF;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1380" y="450" width="380" height="488" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_0" value="&lt;b&gt;&lt;font color=&quot;#5E745D&quot;&gt;PK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT AUTO&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="32" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_1" value="&lt;b&gt;&lt;font color=&quot;#3E4D3E&quot;&gt;UK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;invoice_code&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="56" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_2" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;campaign_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT (RESTRICT)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="80" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_3" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;user_id&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="104" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_4" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;amount&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;DECIMAL(12,2)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="128" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_5" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;donor_name&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="152" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_6" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;donor_email&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="176" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_7" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;donor_phone&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(50) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="200" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_8" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;show_in_hall_of_fame&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;BOOLEAN DEFAULT TRUE&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="224" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_9" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;is_anonymous&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;BOOLEAN DEFAULT FALSE&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="248" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_10" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;support_message&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="272" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_11" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;payment_method&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="296" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_12" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;payment_reference&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(100)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="320" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_13" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;transfer_receipt_path&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;VARCHAR(255) NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="344" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_14" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;verification_note&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TEXT NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="368" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_15" value="&lt;b&gt;&lt;font color=&quot;#7B8E7A&quot;&gt;FK&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;verified_by&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;INT NULL (Admin)&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="392" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_16" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;payment_status&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;ENUM('menunggu_verifikasi','completed','rejected')&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="416" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_17" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;verified_at / paid_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP NULL&lt;/font&gt;" style="text;strokeColor=none;fillColor=#F9FFF0;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="440" width="380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R_T_DONATIONS_18" value="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;created_at / updated_at&lt;/b&gt;&amp;nbsp;:&amp;nbsp;&lt;font color=&quot;#556353&quot;&gt;TIMESTAMP&lt;/font&gt;" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="T_DONATIONS">
+          <mxGeometry y="464" width="380" height="24" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_events_registrations -->
+        <mxCell id="edge_events_registrations" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="T_EVENTS" target="T_EVENT_REGISTRATIONS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_users_registrations -->
+        <mxCell id="edge_users_registrations" value="1 : 0..N (opt)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=0.0;exitY=0.5;entryX=1.0;entryY=0.2;" edge="1" parent="1" source="T_USERS" target="T_EVENT_REGISTRATIONS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_users_activity -->
+        <mxCell id="edge_users_activity" value="1 : 0..N (opt)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="T_USERS" target="T_ACTIVITY_LOGS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_categories_articles -->
+        <mxCell id="edge_categories_articles" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="T_ARTICLE_CATEGORIES" target="T_ARTICLES">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_users_articles -->
+        <mxCell id="edge_users_articles" value="1 : 0..N (opt)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.2;" edge="1" parent="1" source="T_USERS" target="T_ARTICLES">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_campaigns_donations -->
+        <mxCell id="edge_campaigns_donations" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;" edge="1" parent="1" source="T_DONATION_CAMPAIGNS" target="T_DONATIONS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Connector: edge_users_donations -->
+        <mxCell id="edge_users_donations" value="1 : 0..N (opt)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F634E;strokeWidth=2;fontSize=10;fontStyle=1;fontColor=#262E25;labelBackgroundColor=#ffffff;labelBorderColor=#D5E0D4;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;exitX=1.0;exitY=0.3;entryX=0.0;entryY=0.2;" edge="1" parent="1" source="T_USERS" target="T_DONATIONS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

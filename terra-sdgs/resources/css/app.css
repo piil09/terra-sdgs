@@ -1,0 +1,64 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import 'tailwindcss';
+@plugin 'daisyui';
+
+@theme {
+  --font-heading: 'Satoshi', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-sans: 'Roboto', sans-serif;
+
+  --color-primary-00: #000000;
+  --color-primary-10: #090C09;
+  --color-primary-20: #131713;
+  --color-primary-30: #1C231C;
+  --color-primary-40: #262E25;
+  --color-primary-50: #2F3A2F;
+  --color-primary-60: #384638;
+  --color-primary-70: #425141;
+  --color-primary-80: #4B5D4A;
+  --color-primary-90: #556854;
+  --color-primary-100: #5E745D;
+
+  --color-neutral-00: #000000;
+  --color-neutral-10: #191919;
+  --color-neutral-20: #333333;
+  --color-neutral-30: #4C4C4C;
+  --color-neutral-40: #666666;
+  --color-neutral-50: #808080;
+  --color-neutral-60: #999999;
+  --color-neutral-70: #B3B3B3;
+  --color-neutral-80: #CCCCCC;
+  --color-neutral-90: #E6E6E6;
+  --color-neutral-100: #FFFFFF;
+
+  --color-accent-light: #EBF2EA;
+  --color-accent-subtle: #D6E3D4;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-neutral-10);
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(19, 23, 19, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

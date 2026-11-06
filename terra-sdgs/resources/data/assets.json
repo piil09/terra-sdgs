@@ -1,0 +1,48 @@
+{
+  "brand": {
+    "logo": "/svgs/logo.svg",
+    "name": "Terra",
+    "tagline": "\u00a9terra2025"
+  },
+  "images": {
+    "hero_bg": "/images/hero_bg.png",
+    "about_1": "/images/about_1.png",
+    "about_2": "/images/about_2.png",
+    "about_3": "/images/about_3.png",
+    "program_school": "/images/program_school.jpeg",
+    "program_tree": "/images/program_tree.png",
+    "program_waste": "/images/program_waste.jpeg",
+    "event_ancol": "/images/event_ancol.png",
+    "event_zerowaste": "/images/event_zerowaste.png",
+    "event_river": "/images/event_river.png",
+    "article_1": "/images/article_1.png",
+    "article_2": "/images/article_2.jpeg",
+    "article_3": "/images/article_3.png",
+    "cta_bg": "/images/cta_bg.png",
+    "cta_grid1": "/images/cta_grid1.png",
+    "cta_grid2": "/images/cta_grid2.png",
+    "cta_grid3": "/images/cta_grid3.png",
+    "cta_grid4": "/images/cta_grid4.png",
+    "donate_side": "/images/donate_side.jpeg",
+    "journey_hero": "/images/journey_hero.png",
+    "journey_grid1": "/images/journey_grid1.jpeg",
+    "journey_grid2": "/images/journey_grid2.jpeg",
+    "journey_grid3": "/images/journey_grid3.jpeg",
+    "blog_detail": "/images/blog_detail.jpeg",
+    "login_side": "/images/login_side.jpeg"
+  },
+  "icons": {
+    "tree": "/svgs/icon_tree.svg",
+    "trash": "/svgs/icon_trash.svg",
+    "volunteer": "/svgs/icon_volunteer.svg",
+    "school": "/svgs/icon_school.svg",
+    "vision": "/svgs/icon_vision.svg",
+    "mission": "/svgs/icon_mission.svg",
+    "values": "/svgs/icon_values.svg",
+    "arrow_right": "/svgs/icon_arrow_right.svg",
+    "calendar": "/svgs/icon_calendar.svg",
+    "clock": "/svgs/icon_clock.svg",
+    "location": "/svgs/icon_location.svg",
+    "users": "/svgs/icon_users.svg"
+  }
+}

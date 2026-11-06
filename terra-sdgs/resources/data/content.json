@@ -1,0 +1,349 @@
+{
+  "site": {
+    "title": "Terra \u2014 Sustainable Green Environment Community",
+    "description": "Turn intention into impact. Preserve the earth, together.",
+    "nav": [
+      {
+        "label": "Home",
+        "route": "home",
+        "url": "/"
+      },
+      {
+        "label": "About Us",
+        "route": "about",
+        "url": "/about"
+      },
+      {
+        "label": "Event",
+        "route": "events",
+        "url": "/events"
+      },
+      {
+        "label": "Article",
+        "route": "articles",
+        "url": "/articles"
+      }
+    ],
+    "nav_actions": {
+      "donate": {
+        "label": "Donate Us",
+        "route": "donate",
+        "url": "/donate"
+      },
+      "login": {
+        "label": "Login",
+        "route": "login",
+        "url": "/login"
+      }
+    },
+    "footer": {
+      "brand": "Terra",
+      "copyright": "\u00a9terra2025",
+      "cta_button": {
+        "label": "Join Now",
+        "route": "events.register",
+        "url": "/events/register"
+      }
+    }
+  },
+  "landing": {
+    "hero": {
+      "headline": "Turn intention into impact. Preserve the earth, together.",
+      "subheadline": "The planet bleeds while we watch. Our platform transforms silent concern into powerful action.",
+      "cta_primary": {
+        "label": "Join Now",
+        "route": "events.register",
+        "url": "/events/register"
+      },
+      "image": "/images/hero_bg.png"
+    },
+    "about": {
+      "badge": "About Us",
+      "headline": "Starting from a group of individuals' concern about the worsening environmental conditions, Terra was formed in 2026 with a determination to make a real difference.",
+      "stats": [
+        {
+          "value": "5,000+",
+          "label": "trees planted",
+          "icon": "/svgs/icon_tree.svg"
+        },
+        {
+          "value": "3 Tons",
+          "label": "Accumulated Rubbish",
+          "icon": "/svgs/icon_trash.svg"
+        },
+        {
+          "value": "1,200+",
+          "label": "Active volunteer",
+          "icon": "/svgs/icon_volunteer.svg"
+        },
+        {
+          "value": "50+",
+          "label": "Educated School",
+          "icon": "/svgs/icon_school.svg"
+        }
+      ]
+    },
+    "goals": {
+      "items": [
+        {
+          "title": "Vision",
+          "description": "Building awareness and real action for environmental conservation through education, community empowerment, and sustainable programs.",
+          "icon": "/svgs/icon_vision.svg"
+        },
+        {
+          "title": "Mission",
+          "description": "To be a leading environmental community that creates positive and sustainable change for future generations.",
+          "icon": "/svgs/icon_mission.svg"
+        },
+        {
+          "title": "Mark",
+          "description": "Collaboration, sustainability, transparency, and a commitment to making a real impact on the environment and society.",
+          "icon": "/svgs/icon_values.svg"
+        }
+      ]
+    },
+    "events_section": {
+      "badge": "Event",
+      "headline": "Join various fun activities for a better environment",
+      "view_all": {
+        "label": "View All Event",
+        "route": "events",
+        "url": "/events"
+      }
+    },
+    "articles_section": {
+      "badge": "Article",
+      "headline": "Explore inspiring actions for a greener, sustainable future",
+      "view_all": {
+        "label": "View All Arcticle",
+        "route": "articles",
+        "url": "/articles"
+      }
+    },
+    "cta": {
+      "headline": "Support Our Movement",
+      "subheadline": "Every contribution you make helps create a greener and more sustainable environment.",
+      "button": {
+        "label": "Donate Now",
+        "route": "donate",
+        "url": "/donate"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "headline": "United for a Greener Future",
+      "subheadline": "A community driving positive environmental change.",
+      "cta_donate": {
+        "label": "Donate Us",
+        "url": "/donate"
+      },
+      "cta_login": {
+        "label": "Login",
+        "url": "/login"
+      }
+    },
+    "journey": {
+      "badge": "Our Journey",
+      "headline": "Building a community committed to restoring our planet\u2014turning collective action into lasting impact.",
+      "story": [
+        "Starting from a group of individuals' concern about the worsening environmental conditions, the Sustainable Green Environment Community was formed in 2020 with a determination to make a real difference.",
+        "We believe that every small action, when taken together, can create a tremendous impact. From tree planting programs to environmental education, every step we take is dedicated to a greener and more sustainable future.",
+        "Today, we are proud to be home to thousands of individuals who share the same vision\u2014creating a healthier environment for current and future generations."
+      ],
+      "hero_image": "/images/journey_hero.png",
+      "gallery": [
+        "/images/journey_grid1.jpeg",
+        "/images/journey_grid2.jpeg",
+        "/images/journey_grid3.jpeg"
+      ]
+    }
+  },
+  "events": [
+    {
+      "id": 1,
+      "status": "Registration is open",
+      "title": "Beach Clean-up at Ancol",
+      "description": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
+      "date": "15 November 2024",
+      "time": "07:00 - 12:00 WIB",
+      "location": "Ancol Beach",
+      "quota": "50/100 participants",
+      "image": "/images/event_ancol.png",
+      "category": "Clean Up"
+    },
+    {
+      "id": 2,
+      "status": "Registration is open",
+      "title": "Zero Waste Living Workshop",
+      "description": "Practical training to reduce household waste and make environmentally friendly products.",
+      "date": "22 October 2024",
+      "time": "13:00 - 17:00 WIB",
+      "location": "Center Kemang",
+      "quota": "25/30 participants",
+      "image": "/images/event_zerowaste.png",
+      "category": "Workshop"
+    },
+    {
+      "id": 3,
+      "status": "Registration is open",
+      "title": "River Clean Up Action",
+      "description": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
+      "date": "29 October 2024",
+      "time": "07:00 - 11:00 WIB",
+      "location": "River Ciliwung",
+      "quota": "80/150 participants",
+      "image": "/images/event_river.png",
+      "category": "Clean Up"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "slug": "empowering-change-through-digital-sustainability",
+      "category": "Environmental News",
+      "title": "Empowering Change Through Digital Sustainability",
+      "author": "Sarah Mitchell",
+      "date": "November 8, 2025",
+      "excerpt": "Our platform connects individuals, communities, and organizations to take meaningful action for the planet. Through innovation and collaboration, we make sustainability accessible, measurable, and impactful for everyone.",
+      "image": "/images/article_1.png"
+    },
+    {
+      "id": 2,
+      "slug": "innovating-for-a-greener-tomorrow",
+      "category": "Environmental News",
+      "title": "Innovating for a Greener Tomorrow",
+      "author": "Michael Torres",
+      "date": "November 8, 2025",
+      "excerpt": "Discover how technology and community-driven programs come together to protect the environment. From reforestation to waste management initiatives, we\u2019re redefining how digital solutions can drive real-world change.",
+      "image": "/images/article_2.jpeg"
+    },
+    {
+      "id": 3,
+      "slug": "turning-small-steps-into-big-change",
+      "category": "Lifestyle",
+      "title": "Turning small steps into big change.",
+      "author": "Sarah Mitchell",
+      "date": "November 8, 2025",
+      "excerpt": "We believe that every click, share, and contribution matters. Our website serves as a hub for eco-conscious individuals to learn, engage, and take part in programs that create lasting environmental and social benefits.",
+      "image": "/images/article_3.png"
+    },
+    {
+      "id": 4,
+      "slug": "impact-of-climate-change",
+      "category": "Lifestyle",
+      "title": "Impact of Climate Change",
+      "author": "David Chen",
+      "date": "November 10, 2025",
+      "excerpt": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
+      "image": "/images/about_1.png"
+    },
+    {
+      "id": 5,
+      "slug": "sustainable-living",
+      "category": "Conservation",
+      "title": "Sustainable Living",
+      "author": "Emma Watson",
+      "date": "November 12, 2025",
+      "excerpt": "Practical training to reduce household waste and make environmentally friendly products.",
+      "image": "/images/about_2.png"
+    },
+    {
+      "id": 6,
+      "slug": "forest-conservation-success",
+      "category": "Conservation",
+      "title": "Forest Conservation Success",
+      "author": "James Peterson",
+      "date": "November 15, 2025",
+      "excerpt": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
+      "image": "/images/about_3.png"
+    }
+  ],
+  "donate": {
+    "header": {
+      "title": "Make a difference: Donate today",
+      "subtitle": "Every contribution helps realize a greener and more sustainable environment"
+    },
+    "program_title": "Choose a Program to Support",
+    "programs": [
+      {
+        "id": "general",
+        "name": "General Conservation",
+        "desc": "Support overall community operations and emergency green initiatives."
+      },
+      {
+        "id": "waste",
+        "name": "Waste Bank Program",
+        "desc": "Help fund community recycling infrastructure and organic composting."
+      },
+      {
+        "id": "tree",
+        "name": "Tree Planting Campaign",
+        "desc": "Directly plant seedlings in urban forests and critical riverbanks."
+      },
+      {
+        "id": "school",
+        "name": "School Green Education",
+        "desc": "Provide eco-curriculum and tree kits for junior high schools."
+      }
+    ],
+    "amounts": [
+      {
+        "value": 25000,
+        "label": "Rp 25.000"
+      },
+      {
+        "value": 50000,
+        "label": "Rp 50.000"
+      },
+      {
+        "value": 100000,
+        "label": "Rp 100.000"
+      },
+      {
+        "value": 250000,
+        "label": "Rp 250.000"
+      },
+      {
+        "value": 500000,
+        "label": "Rp 500.000"
+      }
+    ],
+    "payment_methods": [
+      {
+        "id": "qris",
+        "name": "QRIS (Instant Payment)"
+      },
+      {
+        "id": "bca",
+        "name": "BCA Virtual Account"
+      },
+      {
+        "id": "mandiri",
+        "name": "Mandiri Livin'"
+      },
+      {
+        "id": "gopay",
+        "name": "GoPay / OVO / ShopeePay"
+      }
+    ]
+  },
+  "registration": {
+    "title": "Join Our Event",
+    "subtitle": "Contribute to our community for a better environment.",
+    "form_title": "Registration Form",
+    "interests": [
+      "Beach Clean Up at Ancol",
+      "Zero Waste Living Workshop",
+      "River Clean Up Action"
+    ]
+  },
+  "login": {
+    "title": "Welcome back!",
+    "subtitle": "Sign in to access your volunteer dashboard and program impact.",
+    "forgot_password": "Forgot your password?",
+    "oauth_text": "Login with Google",
+    "signup_prompt": "Don't have an account? Sign up"
+  }
+}
