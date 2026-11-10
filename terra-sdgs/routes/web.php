@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-// Public Website Routes (Sesuai Desain Figma: Home, About Us, Event, Article, Register Event, Login)
+// Public Website Routes
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/about', [SiteController::class, 'about'])->name('about');
 Route::get('/events', [SiteController::class, 'events'])->name('events');
@@ -14,8 +14,12 @@ Route::get('/articles', [SiteController::class, 'articles'])->name('articles');
 Route::get('/articles/{slug}', [SiteController::class, 'articleDetail'])->name('articles.detail');
 Route::get('/login', [SiteController::class, 'login'])->name('login');
 
-// Admin Portal Routes (Exact Figma: Dashboard, Event, Peserta, Artikel, Pengguna & Admin, Log Aktivitas)
+// Admin Portal Routes with Mandatory Login First
 Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/login', [AdminController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminController::class, 'processLogin'])->name('login.submit');
+    Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
+
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard.index');
     
