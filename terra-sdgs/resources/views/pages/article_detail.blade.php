@@ -118,15 +118,15 @@
                     </div>
                 </div>
 
-                <!-- Quick Donate Widget -->
+                <!-- Join Volunteer Widget -->
                 <div class="p-8 rounded-[24px] bg-[#192119] text-white flex flex-col gap-4 shadow-xl">
                     <span class="text-xs font-bold uppercase tracking-wider text-[#D6E3D4]">Empower Our Mission</span>
                     <h4 class="font-heading font-bold text-2xl">Support Environmental Action</h4>
                     <p class="text-sm text-neutral-300 leading-relaxed">
                         Every dollar contributes directly to seed distribution, waste management tools, and volunteer operations.
                     </p>
-                    <a href="{{ route('donate') }}" class="w-full py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-center text-base transition-colors mt-2">
-                        Donate Now
+                    <a href="{{ route('events.register') }}" class="w-full py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-center text-base transition-colors mt-2">
+                        Join Volunteer
                     </a>
                 </div>
             </div>

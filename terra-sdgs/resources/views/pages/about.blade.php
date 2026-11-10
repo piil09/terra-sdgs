@@ -25,8 +25,8 @@
                 </p>
 
                 <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
-                    <a href="{{ route('donate') }}" class="px-8 py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-base shadow-lg transition-all active:scale-95">
-                        {{ $about['hero']['cta_donate']['label'] ?? 'Donate Us' }}
+                    <a href="{{ route('events') }}" class="px-8 py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-base shadow-lg transition-all active:scale-95">
+                        Explore Events
                     </a>
                     <a href="{{ route('login') }}" class="px-8 py-3.5 rounded-full bg-white/20 hover:bg-white/30 text-white font-heading font-medium text-base backdrop-blur-md transition-all">
                         {{ $about['hero']['cta_login']['label'] ?? 'Login' }}

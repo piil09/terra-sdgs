@@ -1,85 +1,94 @@
 @extends('admin.layout')
 
 @section('title', 'Admin Dashboard')
-@section('page_title', 'Dashboard Overview')
+@section('breadcrumb', 'Dashboard')
 
 @section('content')
 <div class="space-y-8">
-    <!-- Top KPI Metrics Grid -->
+    <!-- Page Heading -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Dashboard Ringkasan</h1>
+            <p class="text-xs text-slate-500 mt-1">Pantau seluruh aktivitas kegiatan pelestarian, pendaftar, dan publikasi artikel Terra SDGs.</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <button class="px-4 py-2 border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-bold transition-all">
+                Unduh laporan
+            </button>
+            <a href="{{ route('admin.events') }}" class="px-4 py-2 bg-forest-600 hover:bg-forest-700 text-white rounded-xl text-xs font-bold flex items-center gap-2 shadow-sm transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <span>+ Tambah event</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Overview 4 Metrics Row (Exact Figma Metric Cards) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         @foreach($admin['stats'] as $stat)
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-            <div class="flex items-center justify-between mb-4">
-                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">{{ $stat['title'] }}</span>
-                <span class="inline-flex items-center gap-1 text-xs font-bold px-2 py-1 rounded-full {{ $stat['trend_positive'] ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700' }}">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-slate-500">{{ $stat['title'] }}</span>
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded-full {{ $stat['trend_positive'] ? 'bg-forest-50 text-forest-700' : 'bg-slate-100 text-slate-600' }}">
                     {{ $stat['trend'] }}
                 </span>
             </div>
             <div>
-                <div class="text-2xl font-extrabold text-slate-900 tracking-tight">{{ $stat['value'] }}</div>
-                <div class="text-xs text-slate-400 mt-1">{{ $stat['period'] }}</div>
+                <div class="text-3xl font-extrabold text-slate-900 tracking-tight">{{ $stat['value'] }}</div>
+                <div class="text-[11px] text-slate-400 mt-1.5">{{ $stat['period'] }}</div>
             </div>
         </div>
         @endforeach
     </div>
 
-    <!-- Middle Section: Chart & Recent Projects Preview -->
+    <!-- Middle Grid: Chart Pendaftar Bulanan & Log Aktivitas -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Monthly Performance Chart Card -->
-        <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200/85 shadow-sm">
+        <!-- Chart Card (Pendaftar per bulan) -->
+        <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div class="flex items-center justify-between mb-6">
                 <div>
-                    <h2 class="text-base font-bold text-slate-900">Performa Penghimpunan & Relawan</h2>
-                    <p class="text-xs text-slate-400">Statistik bulanan kontribusi pelestarian lingkungan</p>
+                    <h2 class="text-sm font-bold text-slate-900">Pertumbuhan Pendaftar Kegiatan</h2>
+                    <p class="text-xs text-slate-400">Tren antusiasme relawan mengikuti program lingkungan tahun 2026</p>
                 </div>
-                <select class="text-xs border border-slate-200 rounded-lg px-3 py-1.5 bg-slate-50 text-slate-600 focus:outline-none">
-                    <option>Tahun 2026</option>
-                    <option>Tahun 2025</option>
-                </select>
+                <span class="text-xs font-semibold px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-slate-600">2026</span>
             </div>
 
-            <!-- Custom CSS Bar Chart Preview -->
-            <div class="h-64 flex items-end justify-between gap-4 pt-6 px-4 border-b border-slate-100">
+            <!-- Custom Bar Chart Visualizing Registrations -->
+            <div class="h-60 flex items-end justify-between gap-4 pt-6 px-4 border-b border-slate-100">
                 @foreach($admin['chart_data'] as $item)
                 <div class="flex-1 flex flex-col items-center gap-2 h-full justify-end group">
-                    <div class="w-full flex items-end justify-center gap-1 h-52">
-                        <!-- Donations Bar -->
-                        <div style="height: {{ $item['donations'] * 1.2 }}%" class="w-4 bg-forest-600 rounded-t-lg transition-all group-hover:bg-forest-700 relative">
+                    <div class="w-full flex items-end justify-center h-48">
+                        <div style="height: {{ ($item['registrations'] / 200) * 100 }}%" class="w-6 bg-forest-600 rounded-t-lg transition-all group-hover:bg-forest-700 relative">
                             <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                                {{ $item['donations'] }} jt
+                                {{ $item['registrations'] }} orang
                             </span>
                         </div>
-                        <!-- Volunteers Bar -->
-                        <div style="height: {{ $item['volunteers'] * 0.7 }}%" class="w-4 bg-emerald-300 rounded-t-lg transition-all group-hover:bg-emerald-400"></div>
                     </div>
                     <span class="text-xs font-semibold text-slate-500">{{ $item['month'] }}</span>
                 </div>
                 @endforeach
             </div>
             
-            <div class="flex items-center justify-center gap-6 pt-4 text-xs font-medium text-slate-600">
+            <div class="flex items-center gap-4 pt-4 text-xs font-medium text-slate-500">
                 <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-forest-600"></span>
-                    <span>Dana Donasi (Jutaan Rp)</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-emerald-300"></span>
-                    <span>Jumlah Relawan</span>
+                    <span class="w-3 h-3 rounded-md bg-forest-600"></span>
+                    <span>Pendaftar Terverifikasi per Bulan</span>
                 </div>
             </div>
         </div>
 
-        <!-- Quick Activity / Audit Summary -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200/85 shadow-sm flex flex-col justify-between">
+        <!-- Log Aktivitas Terakhir -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
             <div>
                 <div class="flex items-center justify-between mb-4">
-                    <h2 class="text-base font-bold text-slate-900">Aktivitas Sistem</h2>
-                    <a href="{{ route('admin.projects') }}" class="text-xs font-semibold text-forest-700 hover:underline">Lihat Semua</a>
+                    <h2 class="text-sm font-bold text-slate-900">Log Aktivitas Terbaru</h2>
+                    <a href="{{ route('admin.logs') }}" class="text-xs font-semibold text-forest-700 hover:underline">Lihat Semua</a>
                 </div>
                 <div class="space-y-4">
                     @foreach($admin['audit_logs'] as $log)
                     <div class="flex items-start gap-3 pb-3 border-b border-slate-100 last:border-0 last:pb-0">
-                        <div class="w-8 h-8 rounded-full bg-forest-50 text-forest-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                        <div class="w-7 h-7 rounded-full bg-forest-50 text-forest-700 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                             {{ substr($log['user'], 0, 1) }}
                         </div>
                         <div class="min-w-0 flex-1">
@@ -93,8 +102,8 @@
             </div>
 
             <div class="mt-6 pt-4 border-t border-slate-100">
-                <a href="{{ route('admin.projects') }}" class="w-full py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 flex items-center justify-center gap-2 transition-colors">
-                    <span>Kelola Data Proyek</span>
+                <a href="{{ route('admin.events') }}" class="w-full py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 flex items-center justify-center gap-2 transition-colors">
+                    <span>Kelola Semua Event</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
@@ -103,15 +112,15 @@
         </div>
     </div>
 
-    <!-- Bottom Section: Recent Donations Table -->
-    <div class="bg-white rounded-2xl border border-slate-200/85 shadow-sm overflow-hidden">
-        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+    <!-- Bottom Section: Daftar Event Aktif & Pendaftar Terkini -->
+    <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
+        <div class="p-5 border-b border-slate-100 flex items-center justify-between">
             <div>
-                <h2 class="text-base font-bold text-slate-900">Donasi & Transaksi Terbaru</h2>
-                <p class="text-xs text-slate-400">Daftar kontribusi donatur yang masuk ke berbagai program konservasi</p>
+                <h2 class="text-sm font-bold text-slate-900">Event & Pendaftar Terkini</h2>
+                <p class="text-xs text-slate-400">Status kuota kegiatan yang sedang berjalan</p>
             </div>
-            <a href="{{ route('admin.donations') }}" class="text-xs font-semibold text-forest-700 hover:bg-forest-50 px-3 py-1.5 rounded-lg transition-colors">
-                Kelola Semua Donasi &rarr;
+            <a href="{{ route('admin.events') }}" class="text-xs font-semibold text-forest-700 hover:bg-forest-50 px-3 py-1.5 rounded-lg transition-colors">
+                Lihat Semua Event &rarr;
             </a>
         </div>
 
@@ -119,31 +128,45 @@
             <table class="w-full text-left border-collapse">
                 <thead>
                     <tr class="bg-slate-50/70 border-b border-slate-100 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                        <th class="py-3 px-6">ID Transaksi</th>
-                        <th class="py-3 px-6">Donatur</th>
-                        <th class="py-3 px-6">Proyek Tujuan</th>
-                        <th class="py-3 px-6">Nominal</th>
-                        <th class="py-3 px-6">Metode</th>
-                        <th class="py-3 px-6">Waktu</th>
+                        <th class="py-3 px-6">Nama Event</th>
+                        <th class="py-3 px-6">Kategori</th>
+                        <th class="py-3 px-6">Waktu & Lokasi</th>
+                        <th class="py-3 px-6">Kuota Terisi</th>
                         <th class="py-3 px-6">Status</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100 text-xs">
-                    @foreach($admin['recent_donations'] as $donation)
+                    @foreach($admin['events_list'] as $event)
                     <tr class="hover:bg-slate-50/50 transition-colors">
-                        <td class="py-4 px-6 font-semibold text-slate-900">{{ $donation['id'] }}</td>
                         <td class="py-4 px-6">
-                            <div class="font-medium text-slate-900">{{ $donation['donor_name'] }}</div>
-                            <div class="text-slate-400 text-[11px]">{{ $donation['donor_email'] }}</div>
+                            <div class="flex items-center gap-3">
+                                <img src="{{ $event['image'] }}" alt="{{ $event['title'] }}" class="w-10 h-10 rounded-xl object-cover border border-slate-200 shrink-0">
+                                <span class="font-bold text-slate-900">{{ $event['title'] }}</span>
+                            </div>
                         </td>
-                        <td class="py-4 px-6 text-slate-600 max-w-xs truncate">{{ $donation['project'] }}</td>
-                        <td class="py-4 px-6 font-bold text-forest-700">{{ $donation['amount'] }}</td>
-                        <td class="py-4 px-6 text-slate-600">{{ $donation['payment_method'] }}</td>
-                        <td class="py-4 px-6 text-slate-400">{{ $donation['date'] }}</td>
                         <td class="py-4 px-6">
-                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700">
-                                {{ $donation['status'] }}
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700">
+                                {{ $event['category'] }}
                             </span>
+                        </td>
+                        <td class="py-4 px-6 text-slate-600">
+                            <div>{{ $event['date'] }}</div>
+                            <div class="text-slate-400 text-[11px]">{{ $event['location'] }}</div>
+                        </td>
+                        <td class="py-4 px-6">
+                            <div class="font-bold text-slate-900">{{ $event['registered'] }} / {{ $event['quota'] }}</div>
+                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden mt-1">
+                                <div class="bg-forest-600 h-1.5 rounded-full" style="width: {{ round(($event['registered'] / $event['quota']) * 100) }}%"></div>
+                            </div>
+                        </td>
+                        <td class="py-4 px-6">
+                            @if($event['status'] === 'Aktif')
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-50 text-emerald-700">Aktif</span>
+                            @elseif($event['status'] === 'Penuh')
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-700">Penuh</span>
+                            @else
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600">Selesai</span>
+                            @endif
                         </td>
                     </tr>
                     @endforeach

@@ -1,60 +1,48 @@
-@props(['cta' => null, 'assets' => null])
+@props(['cta' => []])
 
 @php
-    $headline = $cta['headline'] ?? 'Support Our Movement';
-    $subheadline = $cta['subheadline'] ?? 'Every contribution you make helps create a greener and more sustainable environment.';
-    $btnLabel = $cta['button']['label'] ?? 'Donate Now';
-    $btnUrl = $cta['button']['url'] ?? route('donate');
+    $bgImg = asset('images/cta_bg.png');
+    $btnLabel = $cta['button']['label'] ?? 'Explore Events';
+    $btnUrl = $cta['button']['url'] ?? route('events');
 @endphp
 
-<!-- CTA SECTION (Figma: w=1440, h=764, Container w=1416, h=740, Centered content surrounded by 4 floating image cards) -->
-<section class="w-full py-8 md:py-16">
-    <div class="max-w-[1416px] mx-auto px-4 md:px-6">
-        <div class="relative overflow-hidden rounded-[32px] bg-[#192119] min-h-[580px] lg:h-[740px] flex items-center justify-center p-6 md:p-12 shadow-2xl">
-            <!-- Background subtle overlay -->
-            <img src="{{ asset('images/cta_bg.png') }}" alt="CTA Background" class="absolute inset-0 w-full h-full object-cover opacity-15">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
-
-            <!-- Floating 4 Image Cards around center (Figma: Rectangles 29, 30, 31, 32 of 216x216) -->
-            <!-- Top-Left Floating Card (Rectangle 29) -->
-            <div class="hidden lg:block absolute top-12 left-12 w-[200px] xl:w-[216px] h-[200px] xl:h-[216px] rounded-[24px] overflow-hidden shadow-2xl z-20 transform hover:-translate-y-1 transition-transform">
-                <img src="{{ asset('images/cta_grid1.png') }}" alt="Terra Nature 1" class="w-full h-full object-cover">
+<!-- CTA SECTION (Figma: w=1440, h=520, bg #131713, Frame 157 w=1312, h=400, r=40px) -->
+<section class="w-full bg-white py-12 md:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+        <!-- Frame 157: Dark Card Container -->
+        <div class="relative w-full rounded-[40px] bg-[#131713] overflow-hidden p-8 md:p-16 lg:p-20 text-white min-h-[400px] flex flex-col justify-between shadow-2xl">
+            <!-- Background Image with Dark Overlay -->
+            <div class="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
+                <img src="{{ $bgImg }}" alt="Terra CTA Background" class="w-full h-full object-cover">
             </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#131713] via-[#131713]/85 to-transparent z-0"></div>
 
-            <!-- Top-Right Floating Card (Rectangle 30) -->
-            <div class="hidden lg:block absolute top-12 right-12 w-[200px] xl:w-[216px] h-[200px] xl:h-[216px] rounded-[24px] overflow-hidden shadow-2xl z-20 transform hover:-translate-y-1 transition-transform">
-                <img src="{{ asset('images/cta_grid2.png') }}" alt="Terra Nature 2" class="w-full h-full object-cover">
-            </div>
+            <!-- Content Area (Z-Index 10) -->
+            <div class="relative z-10 max-w-2xl flex flex-col gap-6">
+                <!-- Tagline Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 w-fit text-sm text-[#D6E3D4] font-medium font-heading">
+                    <span class="w-2 h-2 rounded-full bg-[#5E745D]"></span>
+                    <span>{{ $cta['tagline'] ?? 'Take Action Today' }}</span>
+                </div>
 
-            <!-- Bottom-Left Floating Card (Rectangle 32) -->
-            <div class="hidden lg:block absolute bottom-12 left-28 xl:left-36 w-[200px] xl:w-[216px] h-[200px] xl:h-[216px] rounded-[24px] overflow-hidden shadow-2xl z-20 transform hover:-translate-y-1 transition-transform">
-                <img src="{{ asset('images/about_2.png') }}" alt="Terra Nature 3" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Bottom-Right Floating Card (Rectangle 31) -->
-            <div class="hidden lg:block absolute bottom-12 right-28 xl:right-36 w-[200px] xl:w-[216px] h-[200px] xl:h-[216px] rounded-[24px] overflow-hidden shadow-2xl z-20 transform hover:-translate-y-1 transition-transform">
-                <img src="{{ asset('images/cta_grid4.png') }}" alt="Terra Nature 4" class="w-full h-full object-cover">
-            </div>
-
-            <!-- Centered Text Block (Frame 198 in Figma: w=684, h=221) -->
-            <div class="relative z-30 max-w-[684px] mx-auto flex flex-col items-center text-center gap-6">
-                <!-- Headline (64px Medium #FFFFFF) -->
-                <h2 class="font-heading font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-white leading-[1.15] tracking-tight">
-                    {{ $headline }}
+                <!-- Main Heading -->
+                <h2 class="font-heading font-medium text-3xl md:text-5xl lg:text-[56px] leading-[1.15] tracking-tight text-white">
+                    {{ $cta['title'] ?? 'Ready to Make an Impact with Terra?' }}
                 </h2>
 
-                <!-- Subheadline (24px Regular #FFFFFF) -->
-                <p class="text-neutral-200 text-base sm:text-lg md:text-[22px] lg:text-[24px] font-normal leading-relaxed max-w-[667px]">
-                    {{ $subheadline }}
+                <!-- Subtitle -->
+                <p class="font-sans font-normal text-base md:text-lg text-neutral-300 leading-relaxed max-w-xl">
+                    {{ $cta['subtitle'] ?? 'Join thousands of youth and environmental advocates taking concrete actions to restore nature and preserve biodiversity.' }}
                 </p>
+            </div>
 
-                <!-- Button (w=152, h=46, bg #5E745D, 18px Bold) -->
-                <div class="pt-2">
-                    <a href="{{ $btnUrl }}" 
-                       class="px-8 py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-[18px] shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 inline-flex items-center justify-center">
-                        {{ $btnLabel }}
-                    </a>
-                </div>
+            <!-- CTA Action Button -->
+            <div class="relative z-10 mt-8 pt-4">
+                <a href="{{ $btnUrl }}" 
+                   class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 group">
+                    <span>{{ $btnLabel }}</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
             </div>
         </div>
     </div>

@@ -27,10 +27,9 @@
 
         <!-- Desktop Action Buttons -->
         <div class="hidden md:flex items-center gap-4">
-            <a href="{{ route('donate') }}" 
+            <a href="{{ route('events.register') }}" 
                class="px-6 py-3 rounded-full bg-[#5E745D] text-white font-heading font-bold text-[16px] shadow-sm hover:bg-[#4B5D4A] hover:shadow transition-all duration-200 active:scale-95 flex items-center gap-2">
-                <i data-lucide="heart" class="w-4 h-4 fill-white/20"></i>
-                <span>{{ $site['nav_actions']['donate']['label'] ?? 'Donate Us' }}</span>
+                <span>Join Volunteer</span>
             </a>
             
             <a href="{{ route('login') }}" 
@@ -41,8 +40,8 @@
 
         <!-- Mobile Menu Trigger -->
         <div class="flex items-center gap-2 lg:hidden">
-            <a href="{{ route('donate') }}" class="px-4 py-2 rounded-full bg-[#5E745D] text-white text-xs font-bold font-heading">
-                Donate
+            <a href="{{ route('events.register') }}" class="px-4 py-2 rounded-full bg-[#5E745D] text-white text-xs font-bold font-heading">
+                Join
             </a>
             <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-neutral-700 hover:bg-neutral-100" aria-label="Toggle Menu">
                 <i data-lucide="menu" class="w-6 h-6"></i>

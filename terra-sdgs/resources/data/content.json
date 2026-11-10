@@ -25,11 +25,6 @@
             }
         ],
         "nav_actions": {
-            "donate": {
-                "label": "Donate Us",
-                "route": "donate",
-                "url": "/donate"
-            },
             "login": {
                 "label": "Login",
                 "route": "login",
@@ -124,9 +119,8 @@
             "headline": "Support Our Movement",
             "subheadline": "Every contribution you make helps create a greener and more sustainable environment.",
             "button": {
-                "label": "Donate Now",
-                "route": "donate",
-                "url": "/donate"
+                "label": "Join Event",
+                "url": "/events"
             }
         }
     },
@@ -135,13 +129,13 @@
             "badge": "About Us",
             "headline": "United for a Greener Future",
             "subheadline": "A community driving positive environmental change.",
-            "cta_donate": {
-                "label": "Donate Us",
-                "url": "/donate"
-            },
             "cta_login": {
                 "label": "Login",
                 "url": "/login"
+            },
+            "cta_event": {
+                "label": "Explore Events",
+                "url": "/events"
             }
         },
         "journey": {
@@ -260,75 +254,6 @@
             "image": "/images/about_3.png"
         }
     ],
-    "donate": {
-        "header": {
-            "title": "Make a difference: Donate today",
-            "subtitle": "Every contribution helps realize a greener and more sustainable environment"
-        },
-        "program_title": "Choose a Program to Support",
-        "programs": [
-            {
-                "id": "general",
-                "name": "General Conservation",
-                "desc": "Support overall community operations and emergency green initiatives."
-            },
-            {
-                "id": "waste",
-                "name": "Waste Bank Program",
-                "desc": "Help fund community recycling infrastructure and organic composting."
-            },
-            {
-                "id": "tree",
-                "name": "Tree Planting Campaign",
-                "desc": "Directly plant seedlings in urban forests and critical riverbanks."
-            },
-            {
-                "id": "school",
-                "name": "School Green Education",
-                "desc": "Provide eco-curriculum and tree kits for junior high schools."
-            }
-        ],
-        "amounts": [
-            {
-                "value": 25000,
-                "label": "Rp 25.000"
-            },
-            {
-                "value": 50000,
-                "label": "Rp 50.000"
-            },
-            {
-                "value": 100000,
-                "label": "Rp 100.000"
-            },
-            {
-                "value": 250000,
-                "label": "Rp 250.000"
-            },
-            {
-                "value": 500000,
-                "label": "Rp 500.000"
-            }
-        ],
-        "payment_methods": [
-            {
-                "id": "qris",
-                "name": "QRIS (Instant Payment)"
-            },
-            {
-                "id": "bca",
-                "name": "BCA Virtual Account"
-            },
-            {
-                "id": "mandiri",
-                "name": "Mandiri Livin'"
-            },
-            {
-                "id": "gopay",
-                "name": "GoPay / OVO / ShopeePay"
-            }
-        ]
-    },
     "registration": {
         "title": "Join Our Event",
         "subtitle": "Contribute to our community for a better environment.",
@@ -349,274 +274,320 @@
     "admin": {
         "stats": [
             {
-                "id": "donations",
-                "title": "Total Dana Donasi",
-                "value": "Rp 128.450.000",
-                "trend": "+14.8%",
+                "id": "events",
+                "title": "Total Kegiatan",
+                "value": "12",
+                "trend": "+2 bulan ini",
                 "trend_positive": true,
-                "period": "vs. bulan lalu",
-                "icon": "wallet"
+                "period": "8 aktif, 4 selesai",
+                "icon": "calendar-days"
             },
             {
-                "id": "projects",
-                "title": "Proyek Aktif",
-                "value": "12 Proyek",
-                "trend": "+2 baru",
-                "trend_positive": true,
-                "period": "bulan ini",
-                "icon": "folder"
-            },
-            {
-                "id": "trees",
-                "title": "Pohon Tertanam / CO\u2082",
-                "value": "4.820 Pohon",
-                "trend": "+22.4%",
-                "trend_positive": true,
-                "period": "setara 12.4 ton CO\u2082",
-                "icon": "leaf"
-            },
-            {
-                "id": "volunteers",
-                "title": "Relawan Terdaftar",
-                "value": "358 Orang",
+                "id": "participants",
+                "title": "Total Pendaftar",
+                "value": "358",
                 "trend": "+18.2%",
                 "trend_positive": true,
-                "period": "di 5 kota aktif",
+                "period": "dari 5 kota",
                 "icon": "users"
+            },
+            {
+                "id": "articles",
+                "title": "Total Artikel",
+                "value": "24",
+                "trend": "+4 baru",
+                "trend_positive": true,
+                "period": "6 kategori",
+                "icon": "newspaper"
+            },
+            {
+                "id": "admins",
+                "title": "Pengguna & Admin",
+                "value": "6",
+                "trend": "Tim Inti",
+                "trend_positive": true,
+                "period": "3 Super Admin, 3 Editor",
+                "icon": "contact-round"
             }
         ],
         "chart_data": [
             {
                 "month": "Mei",
-                "donations": 18,
-                "volunteers": 40
+                "registrations": 45,
+                "events": 2
             },
             {
                 "month": "Jun",
-                "donations": 24,
-                "volunteers": 55
+                "registrations": 68,
+                "events": 3
             },
             {
                 "month": "Jul",
-                "donations": 32,
-                "volunteers": 70
+                "registrations": 92,
+                "events": 4
             },
             {
                 "month": "Agu",
-                "donations": 28,
-                "volunteers": 62
+                "registrations": 85,
+                "events": 3
             },
             {
                 "month": "Sep",
-                "donations": 45,
-                "volunteers": 88
+                "registrations": 120,
+                "events": 5
             },
             {
                 "month": "Okt",
-                "donations": 60,
-                "volunteers": 110
+                "registrations": 165,
+                "events": 6
             },
             {
                 "month": "Nov",
-                "donations": 74,
-                "volunteers": 145
+                "registrations": 198,
+                "events": 8
             }
         ],
-        "projects": [
+        "events_list": [
             {
                 "id": 1,
-                "name": "Restorasi Hutan Mangrove Pantai Indah",
-                "code": "PRJ-MGV-01",
-                "category": "Konservasi Pesisir",
-                "location": "Jakarta Utara",
-                "target_amount": 50000000,
-                "collected_amount": 42500000,
-                "trees_target": 2500,
-                "trees_planted": 2100,
-                "status": "Active",
-                "status_label": "Aktif",
-                "start_date": "10 Agu 2026",
-                "image": "/images/program_tree.png"
+                "title": "Beach Clean-up at Ancol",
+                "slug": "beach-clean-up-ancol",
+                "category": "Pembersihan Pesisir",
+                "date": "15 Nov 2026",
+                "time": "08:00 - 12:00 WIB",
+                "location": "Pantai Ancol, Jakarta Utara",
+                "quota": 100,
+                "registered": 86,
+                "status": "Aktif",
+                "image": "/images/event_ancol.png",
+                "description": "Aksi nyata membersihkan sampah plastik di pesisir Ancol demi menjaga kelestarian biota laut dan ekosistem terumbu karang."
             },
             {
                 "id": 2,
-                "name": "Reboisasi Lereng Gunung Wilis",
-                "code": "PRJ-WLS-02",
-                "category": "Reboisasi Hutan",
-                "location": "Kediri, Jawa Timur",
-                "target_amount": 75000000,
-                "collected_amount": 51200000,
-                "trees_target": 5000,
-                "trees_planted": 3400,
-                "status": "Active",
-                "status_label": "Aktif",
-                "start_date": "01 Sep 2026",
-                "image": "/images/about_1.png"
+                "title": "Zero Waste Living Workshop",
+                "slug": "zero-waste-living-workshop",
+                "category": "Edukasi & Workshop",
+                "date": "22 Nov 2026",
+                "time": "09:00 - 14:00 WIB",
+                "location": "Terra Hub, Jakarta Selatan",
+                "quota": 50,
+                "registered": 48,
+                "status": "Aktif",
+                "image": "/images/event_zerowaste.png",
+                "description": "Workshop interaktif teknik pembuatan kompos rumah tangga, ecobrick, dan gaya hidup minim sampah bersama praktisi lingkungan."
             },
             {
                 "id": 3,
-                "name": "Bank Sampah & Kompos Komunitas Sungai Brantas",
-                "code": "PRJ-SGB-03",
-                "category": "Pengelolaan Limbah",
-                "location": "Malang, Jawa Timur",
-                "target_amount": 30000000,
-                "collected_amount": 30000000,
-                "trees_target": 500,
-                "trees_planted": 500,
-                "status": "Completed",
-                "status_label": "Selesai",
-                "start_date": "15 Mei 2026",
-                "image": "/images/program_waste.jpeg"
+                "title": "River Clean Up Action Brantas",
+                "slug": "river-clean-up-brantas",
+                "category": "Konservasi Sungai",
+                "date": "29 Nov 2026",
+                "time": "07:30 - 11:30 WIB",
+                "location": "Bantaran Sungai Brantas, Malang",
+                "quota": 150,
+                "registered": 142,
+                "status": "Aktif",
+                "image": "/images/event_river.png",
+                "description": "Gerakan penyelamatan mata air dan daerah aliran sungai Brantas dengan penyisiran sampah terapung dan penanaman rumput vetiver."
             },
             {
                 "id": 4,
-                "name": "Edukasi Generasi Hijau Sekolah Pesisir",
-                "code": "PRJ-EDU-04",
-                "category": "Edukasi SDGs",
-                "location": "Surabaya & Gresik",
-                "target_amount": 20000000,
-                "collected_amount": 8500000,
-                "trees_target": 1000,
-                "trees_planted": 450,
-                "status": "Active",
-                "status_label": "Aktif",
-                "start_date": "12 Okt 2026",
-                "image": "/images/program_school.jpeg"
+                "title": "Penanaman 1.000 Mangrove Teluk Benoa",
+                "slug": "penanaman-mangrove-benoa",
+                "category": "Reboisasi Mangrove",
+                "date": "05 Des 2026",
+                "time": "07:00 - 12:00 WITA",
+                "location": "Teluk Benoa, Badung, Bali",
+                "quota": 80,
+                "registered": 80,
+                "status": "Penuh",
+                "image": "/images/about_1.png",
+                "description": "Kolaborasi penanaman bibit Rhizophora mucronata untuk benteng abrasi alami pesisir selatan Bali."
             },
             {
                 "id": 5,
-                "name": "Pembersihan Terumbu Karang Teluk Benoa",
-                "code": "PRJ-TRB-05",
-                "category": "Ekosistem Laut",
-                "location": "Benoa, Bali",
-                "target_amount": 40000000,
-                "collected_amount": 12000000,
-                "trees_target": 1200,
-                "trees_planted": 200,
-                "status": "Pending",
-                "status_label": "Dalam Review",
-                "start_date": "05 Des 2026",
-                "image": "/images/event_ancol.png"
+                "title": "Workshop Pilah Sampah Rumah Tangga",
+                "slug": "workshop-pilah-sampah",
+                "category": "Pengelolaan Limbah",
+                "date": "10 Okt 2026",
+                "time": "13:00 - 16:00 WIB",
+                "location": "Aula Komunitas Surabaya",
+                "quota": 60,
+                "registered": 60,
+                "status": "Selesai",
+                "image": "/images/program_waste.jpeg",
+                "description": "Pelatihan pemilahan 5 kategori sampah rumah tangga dan pengenalan aplikasi penjemputan sampah daur ulang."
             }
         ],
-        "recent_donations": [
+        "participants_list": [
             {
-                "id": "DON-8921",
-                "donor_name": "Gavril M. Ghazanfar",
-                "donor_email": "muhgavril@gmail.com",
-                "project": "Restorasi Hutan Mangrove Pantai Indah",
-                "amount": "Rp 500.000",
-                "payment_method": "QRIS",
-                "date": "10 Nov 2026, 14:20",
-                "status": "Success"
+                "id": "REG-001",
+                "name": "Gavril Muhammad Ghazanfar",
+                "email": "muhgavril@gmail.com",
+                "phone": "081234567890",
+                "event_title": "Beach Clean-up at Ancol",
+                "city": "Malang",
+                "occupation": "Mahasiswa",
+                "registered_at": "10 Nov 2026, 14:15",
+                "status": "Terverifikasi"
             },
             {
-                "id": "DON-8920",
-                "donor_name": "Aditya Pratama",
-                "donor_email": "aditya.p@gmail.com",
-                "project": "Reboisasi Lereng Gunung Wilis",
-                "amount": "Rp 1.000.000",
-                "payment_method": "BCA Virtual Account",
-                "date": "10 Nov 2026, 11:05",
-                "status": "Success"
+                "id": "REG-002",
+                "name": "Sarah Amalia",
+                "email": "sarah.amalia@gmail.com",
+                "phone": "082198765432",
+                "event_title": "Zero Waste Living Workshop",
+                "city": "Jakarta",
+                "occupation": "Karyawan Swasta",
+                "registered_at": "09 Nov 2026, 10:30",
+                "status": "Terverifikasi"
             },
             {
-                "id": "DON-8919",
-                "donor_name": "Siti Nurhaliza",
-                "donor_email": "siti.nur@yahoo.com",
-                "project": "Edukasi Generasi Hijau Sekolah Pesisir",
-                "amount": "Rp 250.000",
-                "payment_method": "GoPay",
-                "date": "09 Nov 2026, 19:42",
-                "status": "Success"
+                "id": "REG-003",
+                "name": "Budi Santoso",
+                "email": "budi.santoso@yahoo.com",
+                "phone": "081377889900",
+                "event_title": "River Clean Up Action Brantas",
+                "city": "Surabaya",
+                "occupation": "Wirausaha",
+                "registered_at": "08 Nov 2026, 16:45",
+                "status": "Menunggu Konfirmasi"
             },
             {
-                "id": "DON-8918",
-                "donor_name": "Budi Santoso",
-                "donor_email": "budisantoso@gmail.com",
-                "project": "Bank Sampah Komunitas Sungai Brantas",
-                "amount": "Rp 750.000",
-                "payment_method": "Mandiri VA",
-                "date": "09 Nov 2026, 15:30",
-                "status": "Success"
+                "id": "REG-004",
+                "name": "Dewi Sartika",
+                "email": "dewi.sartika@gmail.com",
+                "phone": "085611223344",
+                "event_title": "Penanaman 1.000 Mangrove Teluk Benoa",
+                "city": "Denpasar",
+                "occupation": "Aktivis Lingkungan",
+                "registered_at": "07 Nov 2026, 09:12",
+                "status": "Terverifikasi"
             },
             {
-                "id": "DON-8917",
-                "donor_name": "PT Sinar Lestari Alam",
-                "donor_email": "csr@sinarlestari.co.id",
-                "project": "Restorasi Hutan Mangrove Pantai Indah",
-                "amount": "Rp 15.000.000",
-                "payment_method": "Bank Transfer",
-                "date": "08 Nov 2026, 09:15",
-                "status": "Success"
+                "id": "REG-005",
+                "name": "Rian Wicaksono",
+                "email": "rian.wicaksono@gmail.com",
+                "phone": "087855443322",
+                "event_title": "Beach Clean-up at Ancol",
+                "city": "Bandung",
+                "occupation": "Mahasiswa",
+                "registered_at": "06 Nov 2026, 18:20",
+                "status": "Menunggu Konfirmasi"
             }
         ],
-        "users": [
+        "articles_list": [
+            {
+                "id": 1,
+                "title": "Mengapa Hutan Mangrove Adalah Benteng Terbaik Pesisir Indonesia",
+                "slug": "mengapa-hutan-mangrove-benteng-terbaik",
+                "category": "Konservasi",
+                "author": "Gavril Ghazanfar",
+                "published_at": "08 Nov 2026",
+                "views": 1420,
+                "status": "Dipublikasikan",
+                "image": "/images/article_1.png"
+            },
+            {
+                "id": 2,
+                "title": "Panduan Praktis Memulai Gaya Hidup Zero Waste Tanpa Ribet",
+                "slug": "panduan-praktis-zero-waste",
+                "category": "Gaya Hidup",
+                "author": "Sarah Amalia",
+                "published_at": "05 Nov 2026",
+                "views": 980,
+                "status": "Dipublikasikan",
+                "image": "/images/article_2.jpeg"
+            },
+            {
+                "id": 3,
+                "title": "Masa Depan Energi Terbarukan: Peluang Tenaga Surya di Wilayah Tropis",
+                "slug": "masa-depan-energi-terbarukan",
+                "category": "Inovasi",
+                "author": "Rian Wicaksono",
+                "published_at": "01 Nov 2026",
+                "views": 650,
+                "status": "Dipublikasikan",
+                "image": "/images/article_3.png"
+            },
+            {
+                "id": 4,
+                "title": "Dampak Mikroplastik Terhadap Rantai Makanan Laut Indonesia",
+                "slug": "dampak-mikroplastik-laut",
+                "category": "Riset Lingkungan",
+                "author": "Dewi Sartika",
+                "published_at": "25 Okt 2026",
+                "views": 810,
+                "status": "Draft",
+                "image": "/images/blog_detail.jpeg"
+            }
+        ],
+        "admins_list": [
             {
                 "id": 1,
                 "name": "Gavril Muhammad Ghazanfar",
                 "email": "muhgavril@gmail.com",
                 "role": "Super Admin",
-                "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
-                "status": "Active",
-                "joined_at": "12 Okt 2026"
+                "status": "Aktif",
+                "joined_at": "12 Okt 2026",
+                "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
             },
             {
                 "id": 2,
                 "name": "Sarah Amalia",
                 "email": "sarah.amalia@terra-sdgs.id",
-                "role": "Project Manager",
-                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
-                "status": "Active",
-                "joined_at": "18 Okt 2026"
+                "role": "Event Coordinator",
+                "status": "Aktif",
+                "joined_at": "18 Okt 2026",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80"
             },
             {
                 "id": 3,
                 "name": "Rian Wicaksono",
                 "email": "rian.w@terra-sdgs.id",
                 "role": "Content Editor",
-                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-                "status": "Active",
-                "joined_at": "22 Okt 2026"
+                "status": "Aktif",
+                "joined_at": "22 Okt 2026",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
             },
             {
                 "id": 4,
                 "name": "Nabila Kartika",
                 "email": "nabila.k@terra-sdgs.id",
-                "role": "Volunteer Coordinator",
-                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
-                "status": "Active",
-                "joined_at": "25 Okt 2026"
+                "role": "Admin",
+                "status": "Aktif",
+                "joined_at": "25 Okt 2026",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&auto=format&fit=crop&q=80"
             }
         ],
         "audit_logs": [
             {
-                "action": "Project Updated",
-                "target": "PRJ-MGV-01: Progres penanaman 2.100 pohon",
+                "action": "Event Baru Dibuat",
+                "target": "Beach Clean-up at Ancol (Kuota: 100)",
                 "user": "Sarah Amalia",
-                "time": "10 menit lalu",
+                "time": "15 menit lalu",
                 "ip": "180.252.12.9"
             },
             {
-                "action": "Donation Verified",
-                "target": "DON-8921: Rp 500.000 via QRIS",
-                "user": "System Gateway",
-                "time": "25 menit lalu",
-                "ip": "127.0.0.1"
-            },
-            {
-                "action": "Volunteer Approved",
-                "target": "Registrasi relawan: 4 pendaftar baru diverifikasi",
+                "action": "Verifikasi Pendaftar",
+                "target": "Gavril M. Ghazanfar terverifikasi untuk Beach Clean-up",
                 "user": "Nabila Kartika",
-                "time": "1 jam lalu",
+                "time": "45 menit lalu",
                 "ip": "114.122.45.6"
             },
             {
-                "action": "Article Published",
+                "action": "Artikel Diterbitkan",
                 "target": "Mengapa Hutan Mangrove Adalah Benteng Terbaik Pesisir",
                 "user": "Rian Wicaksono",
-                "time": "3 jam lalu",
+                "time": "2 jam lalu",
                 "ip": "182.1.200.14"
+            },
+            {
+                "action": "Admin Baru Diundang",
+                "target": "Undangan akses dikirim ke nabila.k@terra-sdgs.id",
+                "user": "Gavril Ghazanfar",
+                "time": "1 hari lalu",
+                "ip": "127.0.0.1"
             }
         ]
     }

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Donation;
 use App\Models\EventRegistration;
 use App\Services\SiteDataService;
 use Illuminate\Http\Request;
@@ -125,39 +124,6 @@ class SiteController extends Controller
             'cta' => $this->data->get('landing.cta'),
             'assets' => $this->data->assets(),
             'activeNav' => 'articles'
-        ]);
-    }
-
-    public function donate()
-    {
-        return view('pages.donate', [
-            'site' => $this->data->site(),
-            'donate' => $this->data->get('donate'),
-            'cta' => $this->data->get('landing.cta'),
-            'assets' => $this->data->assets(),
-            'activeNav' => 'donate'
-        ]);
-    }
-
-    public function storeDonation(Request $request)
-    {
-        $validated = $request->validate([
-            'program_id' => 'required|string',
-            'program_name' => 'required|string',
-            'amount' => 'required|numeric|min:10000',
-            'donor_name' => 'required|string|max:255',
-            'donor_email' => 'required|email|max:255',
-            'donor_phone' => 'nullable|string|max:50',
-            'message' => 'nullable|string',
-            'payment_method' => 'required|string',
-        ]);
-
-        Donation::create($validated);
-
-        return redirect()->route('donate')->with('donation_success', [
-            'amount' => $validated['amount'],
-            'program' => $validated['program_name'],
-            'donor' => $validated['donor_name']
         ]);
     }
 
