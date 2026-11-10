@@ -1,349 +1,623 @@
 {
-  "site": {
-    "title": "Terra \u2014 Sustainable Green Environment Community",
-    "description": "Turn intention into impact. Preserve the earth, together.",
-    "nav": [
-      {
-        "label": "Home",
-        "route": "home",
-        "url": "/"
-      },
-      {
-        "label": "About Us",
-        "route": "about",
-        "url": "/about"
-      },
-      {
-        "label": "Event",
-        "route": "events",
-        "url": "/events"
-      },
-      {
-        "label": "Article",
-        "route": "articles",
-        "url": "/articles"
-      }
-    ],
-    "nav_actions": {
-      "donate": {
-        "label": "Donate Us",
-        "route": "donate",
-        "url": "/donate"
-      },
-      "login": {
-        "label": "Login",
-        "route": "login",
-        "url": "/login"
-      }
+    "site": {
+        "title": "Terra \u2014 Sustainable Green Environment Community",
+        "description": "Turn intention into impact. Preserve the earth, together.",
+        "nav": [
+            {
+                "label": "Home",
+                "route": "home",
+                "url": "/"
+            },
+            {
+                "label": "About Us",
+                "route": "about",
+                "url": "/about"
+            },
+            {
+                "label": "Event",
+                "route": "events",
+                "url": "/events"
+            },
+            {
+                "label": "Article",
+                "route": "articles",
+                "url": "/articles"
+            }
+        ],
+        "nav_actions": {
+            "donate": {
+                "label": "Donate Us",
+                "route": "donate",
+                "url": "/donate"
+            },
+            "login": {
+                "label": "Login",
+                "route": "login",
+                "url": "/login"
+            }
+        },
+        "footer": {
+            "brand": "Terra",
+            "copyright": "\u00a9terra2025",
+            "cta_button": {
+                "label": "Join Now",
+                "route": "events.register",
+                "url": "/events/register"
+            }
+        }
     },
-    "footer": {
-      "brand": "Terra",
-      "copyright": "\u00a9terra2025",
-      "cta_button": {
-        "label": "Join Now",
-        "route": "events.register",
-        "url": "/events/register"
-      }
-    }
-  },
-  "landing": {
-    "hero": {
-      "headline": "Turn intention into impact. Preserve the earth, together.",
-      "subheadline": "The planet bleeds while we watch. Our platform transforms silent concern into powerful action.",
-      "cta_primary": {
-        "label": "Join Now",
-        "route": "events.register",
-        "url": "/events/register"
-      },
-      "image": "/images/hero_bg.png"
+    "landing": {
+        "hero": {
+            "headline": "Turn intention into impact. Preserve the earth, together.",
+            "subheadline": "The planet bleeds while we watch. Our platform transforms silent concern into powerful action.",
+            "cta_primary": {
+                "label": "Join Now",
+                "route": "events.register",
+                "url": "/events/register"
+            },
+            "image": "/images/hero_bg.png"
+        },
+        "about": {
+            "badge": "About Us",
+            "headline": "Starting from a group of individuals' concern about the worsening environmental conditions, Terra was formed in 2026 with a determination to make a real difference.",
+            "stats": [
+                {
+                    "value": "5,000+",
+                    "label": "trees planted",
+                    "icon": "/svgs/icon_tree.svg"
+                },
+                {
+                    "value": "3 Tons",
+                    "label": "Accumulated Rubbish",
+                    "icon": "/svgs/icon_trash.svg"
+                },
+                {
+                    "value": "1,200+",
+                    "label": "Active volunteer",
+                    "icon": "/svgs/icon_volunteer.svg"
+                },
+                {
+                    "value": "50+",
+                    "label": "Educated School",
+                    "icon": "/svgs/icon_school.svg"
+                }
+            ]
+        },
+        "goals": {
+            "items": [
+                {
+                    "title": "Vision",
+                    "description": "Building awareness and real action for environmental conservation through education, community empowerment, and sustainable programs.",
+                    "icon": "/svgs/icon_vision.svg"
+                },
+                {
+                    "title": "Mission",
+                    "description": "To be a leading environmental community that creates positive and sustainable change for future generations.",
+                    "icon": "/svgs/icon_mission.svg"
+                },
+                {
+                    "title": "Mark",
+                    "description": "Collaboration, sustainability, transparency, and a commitment to making a real impact on the environment and society.",
+                    "icon": "/svgs/icon_values.svg"
+                }
+            ]
+        },
+        "events_section": {
+            "badge": "Event",
+            "headline": "Join various fun activities for a better environment",
+            "view_all": {
+                "label": "View All Event",
+                "route": "events",
+                "url": "/events"
+            }
+        },
+        "articles_section": {
+            "badge": "Article",
+            "headline": "Explore inspiring actions for a greener, sustainable future",
+            "view_all": {
+                "label": "View All Arcticle",
+                "route": "articles",
+                "url": "/articles"
+            }
+        },
+        "cta": {
+            "headline": "Support Our Movement",
+            "subheadline": "Every contribution you make helps create a greener and more sustainable environment.",
+            "button": {
+                "label": "Donate Now",
+                "route": "donate",
+                "url": "/donate"
+            }
+        }
     },
     "about": {
-      "badge": "About Us",
-      "headline": "Starting from a group of individuals' concern about the worsening environmental conditions, Terra was formed in 2026 with a determination to make a real difference.",
-      "stats": [
-        {
-          "value": "5,000+",
-          "label": "trees planted",
-          "icon": "/svgs/icon_tree.svg"
+        "hero": {
+            "badge": "About Us",
+            "headline": "United for a Greener Future",
+            "subheadline": "A community driving positive environmental change.",
+            "cta_donate": {
+                "label": "Donate Us",
+                "url": "/donate"
+            },
+            "cta_login": {
+                "label": "Login",
+                "url": "/login"
+            }
         },
-        {
-          "value": "3 Tons",
-          "label": "Accumulated Rubbish",
-          "icon": "/svgs/icon_trash.svg"
-        },
-        {
-          "value": "1,200+",
-          "label": "Active volunteer",
-          "icon": "/svgs/icon_volunteer.svg"
-        },
-        {
-          "value": "50+",
-          "label": "Educated School",
-          "icon": "/svgs/icon_school.svg"
+        "journey": {
+            "badge": "Our Journey",
+            "headline": "Building a community committed to restoring our planet\u2014turning collective action into lasting impact.",
+            "story": [
+                "Starting from a group of individuals' concern about the worsening environmental conditions, the Sustainable Green Environment Community was formed in 2020 with a determination to make a real difference.",
+                "We believe that every small action, when taken together, can create a tremendous impact. From tree planting programs to environmental education, every step we take is dedicated to a greener and more sustainable future.",
+                "Today, we are proud to be home to thousands of individuals who share the same vision\u2014creating a healthier environment for current and future generations."
+            ],
+            "hero_image": "/images/journey_hero.png",
+            "gallery": [
+                "/images/journey_grid1.jpeg",
+                "/images/journey_grid2.jpeg",
+                "/images/journey_grid3.jpeg"
+            ]
         }
-      ]
     },
-    "goals": {
-      "items": [
+    "events": [
         {
-          "title": "Vision",
-          "description": "Building awareness and real action for environmental conservation through education, community empowerment, and sustainable programs.",
-          "icon": "/svgs/icon_vision.svg"
+            "id": 1,
+            "status": "Registration is open",
+            "title": "Beach Clean-up at Ancol",
+            "description": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
+            "date": "15 November 2024",
+            "time": "07:00 - 12:00 WIB",
+            "location": "Ancol Beach",
+            "quota": "50/100 participants",
+            "image": "/images/event_ancol.png",
+            "category": "Clean Up"
         },
         {
-          "title": "Mission",
-          "description": "To be a leading environmental community that creates positive and sustainable change for future generations.",
-          "icon": "/svgs/icon_mission.svg"
+            "id": 2,
+            "status": "Registration is open",
+            "title": "Zero Waste Living Workshop",
+            "description": "Practical training to reduce household waste and make environmentally friendly products.",
+            "date": "22 October 2024",
+            "time": "13:00 - 17:00 WIB",
+            "location": "Center Kemang",
+            "quota": "25/30 participants",
+            "image": "/images/event_zerowaste.png",
+            "category": "Workshop"
         },
         {
-          "title": "Mark",
-          "description": "Collaboration, sustainability, transparency, and a commitment to making a real impact on the environment and society.",
-          "icon": "/svgs/icon_values.svg"
+            "id": 3,
+            "status": "Registration is open",
+            "title": "River Clean Up Action",
+            "description": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
+            "date": "29 October 2024",
+            "time": "07:00 - 11:00 WIB",
+            "location": "River Ciliwung",
+            "quota": "80/150 participants",
+            "image": "/images/event_river.png",
+            "category": "Clean Up"
         }
-      ]
-    },
-    "events_section": {
-      "badge": "Event",
-      "headline": "Join various fun activities for a better environment",
-      "view_all": {
-        "label": "View All Event",
-        "route": "events",
-        "url": "/events"
-      }
-    },
-    "articles_section": {
-      "badge": "Article",
-      "headline": "Explore inspiring actions for a greener, sustainable future",
-      "view_all": {
-        "label": "View All Arcticle",
-        "route": "articles",
-        "url": "/articles"
-      }
-    },
-    "cta": {
-      "headline": "Support Our Movement",
-      "subheadline": "Every contribution you make helps create a greener and more sustainable environment.",
-      "button": {
-        "label": "Donate Now",
-        "route": "donate",
-        "url": "/donate"
-      }
-    }
-  },
-  "about": {
-    "hero": {
-      "badge": "About Us",
-      "headline": "United for a Greener Future",
-      "subheadline": "A community driving positive environmental change.",
-      "cta_donate": {
-        "label": "Donate Us",
-        "url": "/donate"
-      },
-      "cta_login": {
-        "label": "Login",
-        "url": "/login"
-      }
-    },
-    "journey": {
-      "badge": "Our Journey",
-      "headline": "Building a community committed to restoring our planet\u2014turning collective action into lasting impact.",
-      "story": [
-        "Starting from a group of individuals' concern about the worsening environmental conditions, the Sustainable Green Environment Community was formed in 2020 with a determination to make a real difference.",
-        "We believe that every small action, when taken together, can create a tremendous impact. From tree planting programs to environmental education, every step we take is dedicated to a greener and more sustainable future.",
-        "Today, we are proud to be home to thousands of individuals who share the same vision\u2014creating a healthier environment for current and future generations."
-      ],
-      "hero_image": "/images/journey_hero.png",
-      "gallery": [
-        "/images/journey_grid1.jpeg",
-        "/images/journey_grid2.jpeg",
-        "/images/journey_grid3.jpeg"
-      ]
-    }
-  },
-  "events": [
-    {
-      "id": 1,
-      "status": "Registration is open",
-      "title": "Beach Clean-up at Ancol",
-      "description": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
-      "date": "15 November 2024",
-      "time": "07:00 - 12:00 WIB",
-      "location": "Ancol Beach",
-      "quota": "50/100 participants",
-      "image": "/images/event_ancol.png",
-      "category": "Clean Up"
-    },
-    {
-      "id": 2,
-      "status": "Registration is open",
-      "title": "Zero Waste Living Workshop",
-      "description": "Practical training to reduce household waste and make environmentally friendly products.",
-      "date": "22 October 2024",
-      "time": "13:00 - 17:00 WIB",
-      "location": "Center Kemang",
-      "quota": "25/30 participants",
-      "image": "/images/event_zerowaste.png",
-      "category": "Workshop"
-    },
-    {
-      "id": 3,
-      "status": "Registration is open",
-      "title": "River Clean Up Action",
-      "description": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
-      "date": "29 October 2024",
-      "time": "07:00 - 11:00 WIB",
-      "location": "River Ciliwung",
-      "quota": "80/150 participants",
-      "image": "/images/event_river.png",
-      "category": "Clean Up"
-    }
-  ],
-  "articles": [
-    {
-      "id": 1,
-      "slug": "empowering-change-through-digital-sustainability",
-      "category": "Environmental News",
-      "title": "Empowering Change Through Digital Sustainability",
-      "author": "Sarah Mitchell",
-      "date": "November 8, 2025",
-      "excerpt": "Our platform connects individuals, communities, and organizations to take meaningful action for the planet. Through innovation and collaboration, we make sustainability accessible, measurable, and impactful for everyone.",
-      "image": "/images/article_1.png"
-    },
-    {
-      "id": 2,
-      "slug": "innovating-for-a-greener-tomorrow",
-      "category": "Environmental News",
-      "title": "Innovating for a Greener Tomorrow",
-      "author": "Michael Torres",
-      "date": "November 8, 2025",
-      "excerpt": "Discover how technology and community-driven programs come together to protect the environment. From reforestation to waste management initiatives, we\u2019re redefining how digital solutions can drive real-world change.",
-      "image": "/images/article_2.jpeg"
-    },
-    {
-      "id": 3,
-      "slug": "turning-small-steps-into-big-change",
-      "category": "Lifestyle",
-      "title": "Turning small steps into big change.",
-      "author": "Sarah Mitchell",
-      "date": "November 8, 2025",
-      "excerpt": "We believe that every click, share, and contribution matters. Our website serves as a hub for eco-conscious individuals to learn, engage, and take part in programs that create lasting environmental and social benefits.",
-      "image": "/images/article_3.png"
-    },
-    {
-      "id": 4,
-      "slug": "impact-of-climate-change",
-      "category": "Lifestyle",
-      "title": "Impact of Climate Change",
-      "author": "David Chen",
-      "date": "November 10, 2025",
-      "excerpt": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
-      "image": "/images/about_1.png"
-    },
-    {
-      "id": 5,
-      "slug": "sustainable-living",
-      "category": "Conservation",
-      "title": "Sustainable Living",
-      "author": "Emma Watson",
-      "date": "November 12, 2025",
-      "excerpt": "Practical training to reduce household waste and make environmentally friendly products.",
-      "image": "/images/about_2.png"
-    },
-    {
-      "id": 6,
-      "slug": "forest-conservation-success",
-      "category": "Conservation",
-      "title": "Forest Conservation Success",
-      "author": "James Peterson",
-      "date": "November 15, 2025",
-      "excerpt": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
-      "image": "/images/about_3.png"
-    }
-  ],
-  "donate": {
-    "header": {
-      "title": "Make a difference: Donate today",
-      "subtitle": "Every contribution helps realize a greener and more sustainable environment"
-    },
-    "program_title": "Choose a Program to Support",
-    "programs": [
-      {
-        "id": "general",
-        "name": "General Conservation",
-        "desc": "Support overall community operations and emergency green initiatives."
-      },
-      {
-        "id": "waste",
-        "name": "Waste Bank Program",
-        "desc": "Help fund community recycling infrastructure and organic composting."
-      },
-      {
-        "id": "tree",
-        "name": "Tree Planting Campaign",
-        "desc": "Directly plant seedlings in urban forests and critical riverbanks."
-      },
-      {
-        "id": "school",
-        "name": "School Green Education",
-        "desc": "Provide eco-curriculum and tree kits for junior high schools."
-      }
     ],
-    "amounts": [
-      {
-        "value": 25000,
-        "label": "Rp 25.000"
-      },
-      {
-        "value": 50000,
-        "label": "Rp 50.000"
-      },
-      {
-        "value": 100000,
-        "label": "Rp 100.000"
-      },
-      {
-        "value": 250000,
-        "label": "Rp 250.000"
-      },
-      {
-        "value": 500000,
-        "label": "Rp 500.000"
-      }
+    "articles": [
+        {
+            "id": 1,
+            "slug": "empowering-change-through-digital-sustainability",
+            "category": "Environmental News",
+            "title": "Empowering Change Through Digital Sustainability",
+            "author": "Sarah Mitchell",
+            "date": "November 8, 2025",
+            "excerpt": "Our platform connects individuals, communities, and organizations to take meaningful action for the planet. Through innovation and collaboration, we make sustainability accessible, measurable, and impactful for everyone.",
+            "image": "/images/article_1.png"
+        },
+        {
+            "id": 2,
+            "slug": "innovating-for-a-greener-tomorrow",
+            "category": "Environmental News",
+            "title": "Innovating for a Greener Tomorrow",
+            "author": "Michael Torres",
+            "date": "November 8, 2025",
+            "excerpt": "Discover how technology and community-driven programs come together to protect the environment. From reforestation to waste management initiatives, we\u2019re redefining how digital solutions can drive real-world change.",
+            "image": "/images/article_2.jpeg"
+        },
+        {
+            "id": 3,
+            "slug": "turning-small-steps-into-big-change",
+            "category": "Lifestyle",
+            "title": "Turning small steps into big change.",
+            "author": "Sarah Mitchell",
+            "date": "November 8, 2025",
+            "excerpt": "We believe that every click, share, and contribution matters. Our website serves as a hub for eco-conscious individuals to learn, engage, and take part in programs that create lasting environmental and social benefits.",
+            "image": "/images/article_3.png"
+        },
+        {
+            "id": 4,
+            "slug": "impact-of-climate-change",
+            "category": "Lifestyle",
+            "title": "Impact of Climate Change",
+            "author": "David Chen",
+            "date": "November 10, 2025",
+            "excerpt": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
+            "image": "/images/about_1.png"
+        },
+        {
+            "id": 5,
+            "slug": "sustainable-living",
+            "category": "Conservation",
+            "title": "Sustainable Living",
+            "author": "Emma Watson",
+            "date": "November 12, 2025",
+            "excerpt": "Practical training to reduce household waste and make environmentally friendly products.",
+            "image": "/images/about_2.png"
+        },
+        {
+            "id": 6,
+            "slug": "forest-conservation-success",
+            "category": "Conservation",
+            "title": "Forest Conservation Success",
+            "author": "James Peterson",
+            "date": "November 15, 2025",
+            "excerpt": "River clean-up action and socialization of the importance of maintaining water cleanliness.",
+            "image": "/images/about_3.png"
+        }
     ],
-    "payment_methods": [
-      {
-        "id": "qris",
-        "name": "QRIS (Instant Payment)"
-      },
-      {
-        "id": "bca",
-        "name": "BCA Virtual Account"
-      },
-      {
-        "id": "mandiri",
-        "name": "Mandiri Livin'"
-      },
-      {
-        "id": "gopay",
-        "name": "GoPay / OVO / ShopeePay"
-      }
-    ]
-  },
-  "registration": {
-    "title": "Join Our Event",
-    "subtitle": "Contribute to our community for a better environment.",
-    "form_title": "Registration Form",
-    "interests": [
-      "Beach Clean Up at Ancol",
-      "Zero Waste Living Workshop",
-      "River Clean Up Action"
-    ]
-  },
-  "login": {
-    "title": "Welcome back!",
-    "subtitle": "Sign in to access your volunteer dashboard and program impact.",
-    "forgot_password": "Forgot your password?",
-    "oauth_text": "Login with Google",
-    "signup_prompt": "Don't have an account? Sign up"
-  }
+    "donate": {
+        "header": {
+            "title": "Make a difference: Donate today",
+            "subtitle": "Every contribution helps realize a greener and more sustainable environment"
+        },
+        "program_title": "Choose a Program to Support",
+        "programs": [
+            {
+                "id": "general",
+                "name": "General Conservation",
+                "desc": "Support overall community operations and emergency green initiatives."
+            },
+            {
+                "id": "waste",
+                "name": "Waste Bank Program",
+                "desc": "Help fund community recycling infrastructure and organic composting."
+            },
+            {
+                "id": "tree",
+                "name": "Tree Planting Campaign",
+                "desc": "Directly plant seedlings in urban forests and critical riverbanks."
+            },
+            {
+                "id": "school",
+                "name": "School Green Education",
+                "desc": "Provide eco-curriculum and tree kits for junior high schools."
+            }
+        ],
+        "amounts": [
+            {
+                "value": 25000,
+                "label": "Rp 25.000"
+            },
+            {
+                "value": 50000,
+                "label": "Rp 50.000"
+            },
+            {
+                "value": 100000,
+                "label": "Rp 100.000"
+            },
+            {
+                "value": 250000,
+                "label": "Rp 250.000"
+            },
+            {
+                "value": 500000,
+                "label": "Rp 500.000"
+            }
+        ],
+        "payment_methods": [
+            {
+                "id": "qris",
+                "name": "QRIS (Instant Payment)"
+            },
+            {
+                "id": "bca",
+                "name": "BCA Virtual Account"
+            },
+            {
+                "id": "mandiri",
+                "name": "Mandiri Livin'"
+            },
+            {
+                "id": "gopay",
+                "name": "GoPay / OVO / ShopeePay"
+            }
+        ]
+    },
+    "registration": {
+        "title": "Join Our Event",
+        "subtitle": "Contribute to our community for a better environment.",
+        "form_title": "Registration Form",
+        "interests": [
+            "Beach Clean Up at Ancol",
+            "Zero Waste Living Workshop",
+            "River Clean Up Action"
+        ]
+    },
+    "login": {
+        "title": "Welcome back!",
+        "subtitle": "Sign in to access your volunteer dashboard and program impact.",
+        "forgot_password": "Forgot your password?",
+        "oauth_text": "Login with Google",
+        "signup_prompt": "Don't have an account? Sign up"
+    },
+    "admin": {
+        "stats": [
+            {
+                "id": "donations",
+                "title": "Total Dana Donasi",
+                "value": "Rp 128.450.000",
+                "trend": "+14.8%",
+                "trend_positive": true,
+                "period": "vs. bulan lalu",
+                "icon": "wallet"
+            },
+            {
+                "id": "projects",
+                "title": "Proyek Aktif",
+                "value": "12 Proyek",
+                "trend": "+2 baru",
+                "trend_positive": true,
+                "period": "bulan ini",
+                "icon": "folder"
+            },
+            {
+                "id": "trees",
+                "title": "Pohon Tertanam / CO\u2082",
+                "value": "4.820 Pohon",
+                "trend": "+22.4%",
+                "trend_positive": true,
+                "period": "setara 12.4 ton CO\u2082",
+                "icon": "leaf"
+            },
+            {
+                "id": "volunteers",
+                "title": "Relawan Terdaftar",
+                "value": "358 Orang",
+                "trend": "+18.2%",
+                "trend_positive": true,
+                "period": "di 5 kota aktif",
+                "icon": "users"
+            }
+        ],
+        "chart_data": [
+            {
+                "month": "Mei",
+                "donations": 18,
+                "volunteers": 40
+            },
+            {
+                "month": "Jun",
+                "donations": 24,
+                "volunteers": 55
+            },
+            {
+                "month": "Jul",
+                "donations": 32,
+                "volunteers": 70
+            },
+            {
+                "month": "Agu",
+                "donations": 28,
+                "volunteers": 62
+            },
+            {
+                "month": "Sep",
+                "donations": 45,
+                "volunteers": 88
+            },
+            {
+                "month": "Okt",
+                "donations": 60,
+                "volunteers": 110
+            },
+            {
+                "month": "Nov",
+                "donations": 74,
+                "volunteers": 145
+            }
+        ],
+        "projects": [
+            {
+                "id": 1,
+                "name": "Restorasi Hutan Mangrove Pantai Indah",
+                "code": "PRJ-MGV-01",
+                "category": "Konservasi Pesisir",
+                "location": "Jakarta Utara",
+                "target_amount": 50000000,
+                "collected_amount": 42500000,
+                "trees_target": 2500,
+                "trees_planted": 2100,
+                "status": "Active",
+                "status_label": "Aktif",
+                "start_date": "10 Agu 2026",
+                "image": "/images/program_tree.png"
+            },
+            {
+                "id": 2,
+                "name": "Reboisasi Lereng Gunung Wilis",
+                "code": "PRJ-WLS-02",
+                "category": "Reboisasi Hutan",
+                "location": "Kediri, Jawa Timur",
+                "target_amount": 75000000,
+                "collected_amount": 51200000,
+                "trees_target": 5000,
+                "trees_planted": 3400,
+                "status": "Active",
+                "status_label": "Aktif",
+                "start_date": "01 Sep 2026",
+                "image": "/images/about_1.png"
+            },
+            {
+                "id": 3,
+                "name": "Bank Sampah & Kompos Komunitas Sungai Brantas",
+                "code": "PRJ-SGB-03",
+                "category": "Pengelolaan Limbah",
+                "location": "Malang, Jawa Timur",
+                "target_amount": 30000000,
+                "collected_amount": 30000000,
+                "trees_target": 500,
+                "trees_planted": 500,
+                "status": "Completed",
+                "status_label": "Selesai",
+                "start_date": "15 Mei 2026",
+                "image": "/images/program_waste.jpeg"
+            },
+            {
+                "id": 4,
+                "name": "Edukasi Generasi Hijau Sekolah Pesisir",
+                "code": "PRJ-EDU-04",
+                "category": "Edukasi SDGs",
+                "location": "Surabaya & Gresik",
+                "target_amount": 20000000,
+                "collected_amount": 8500000,
+                "trees_target": 1000,
+                "trees_planted": 450,
+                "status": "Active",
+                "status_label": "Aktif",
+                "start_date": "12 Okt 2026",
+                "image": "/images/program_school.jpeg"
+            },
+            {
+                "id": 5,
+                "name": "Pembersihan Terumbu Karang Teluk Benoa",
+                "code": "PRJ-TRB-05",
+                "category": "Ekosistem Laut",
+                "location": "Benoa, Bali",
+                "target_amount": 40000000,
+                "collected_amount": 12000000,
+                "trees_target": 1200,
+                "trees_planted": 200,
+                "status": "Pending",
+                "status_label": "Dalam Review",
+                "start_date": "05 Des 2026",
+                "image": "/images/event_ancol.png"
+            }
+        ],
+        "recent_donations": [
+            {
+                "id": "DON-8921",
+                "donor_name": "Gavril M. Ghazanfar",
+                "donor_email": "muhgavril@gmail.com",
+                "project": "Restorasi Hutan Mangrove Pantai Indah",
+                "amount": "Rp 500.000",
+                "payment_method": "QRIS",
+                "date": "10 Nov 2026, 14:20",
+                "status": "Success"
+            },
+            {
+                "id": "DON-8920",
+                "donor_name": "Aditya Pratama",
+                "donor_email": "aditya.p@gmail.com",
+                "project": "Reboisasi Lereng Gunung Wilis",
+                "amount": "Rp 1.000.000",
+                "payment_method": "BCA Virtual Account",
+                "date": "10 Nov 2026, 11:05",
+                "status": "Success"
+            },
+            {
+                "id": "DON-8919",
+                "donor_name": "Siti Nurhaliza",
+                "donor_email": "siti.nur@yahoo.com",
+                "project": "Edukasi Generasi Hijau Sekolah Pesisir",
+                "amount": "Rp 250.000",
+                "payment_method": "GoPay",
+                "date": "09 Nov 2026, 19:42",
+                "status": "Success"
+            },
+            {
+                "id": "DON-8918",
+                "donor_name": "Budi Santoso",
+                "donor_email": "budisantoso@gmail.com",
+                "project": "Bank Sampah Komunitas Sungai Brantas",
+                "amount": "Rp 750.000",
+                "payment_method": "Mandiri VA",
+                "date": "09 Nov 2026, 15:30",
+                "status": "Success"
+            },
+            {
+                "id": "DON-8917",
+                "donor_name": "PT Sinar Lestari Alam",
+                "donor_email": "csr@sinarlestari.co.id",
+                "project": "Restorasi Hutan Mangrove Pantai Indah",
+                "amount": "Rp 15.000.000",
+                "payment_method": "Bank Transfer",
+                "date": "08 Nov 2026, 09:15",
+                "status": "Success"
+            }
+        ],
+        "users": [
+            {
+                "id": 1,
+                "name": "Gavril Muhammad Ghazanfar",
+                "email": "muhgavril@gmail.com",
+                "role": "Super Admin",
+                "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+                "status": "Active",
+                "joined_at": "12 Okt 2026"
+            },
+            {
+                "id": 2,
+                "name": "Sarah Amalia",
+                "email": "sarah.amalia@terra-sdgs.id",
+                "role": "Project Manager",
+                "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+                "status": "Active",
+                "joined_at": "18 Okt 2026"
+            },
+            {
+                "id": 3,
+                "name": "Rian Wicaksono",
+                "email": "rian.w@terra-sdgs.id",
+                "role": "Content Editor",
+                "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+                "status": "Active",
+                "joined_at": "22 Okt 2026"
+            },
+            {
+                "id": 4,
+                "name": "Nabila Kartika",
+                "email": "nabila.k@terra-sdgs.id",
+                "role": "Volunteer Coordinator",
+                "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
+                "status": "Active",
+                "joined_at": "25 Okt 2026"
+            }
+        ],
+        "audit_logs": [
+            {
+                "action": "Project Updated",
+                "target": "PRJ-MGV-01: Progres penanaman 2.100 pohon",
+                "user": "Sarah Amalia",
+                "time": "10 menit lalu",
+                "ip": "180.252.12.9"
+            },
+            {
+                "action": "Donation Verified",
+                "target": "DON-8921: Rp 500.000 via QRIS",
+                "user": "System Gateway",
+                "time": "25 menit lalu",
+                "ip": "127.0.0.1"
+            },
+            {
+                "action": "Volunteer Approved",
+                "target": "Registrasi relawan: 4 pendaftar baru diverifikasi",
+                "user": "Nabila Kartika",
+                "time": "1 jam lalu",
+                "ip": "114.122.45.6"
+            },
+            {
+                "action": "Article Published",
+                "target": "Mengapa Hutan Mangrove Adalah Benteng Terbaik Pesisir",
+                "user": "Rian Wicaksono",
+                "time": "3 jam lalu",
+                "ip": "182.1.200.14"
+            }
+        ]
+    }
 }
