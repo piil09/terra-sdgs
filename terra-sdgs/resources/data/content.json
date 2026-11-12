@@ -164,7 +164,7 @@
             "time": "07:00 - 12:00 WIB",
             "location": "Ancol Beach",
             "quota": "50/100 participants",
-            "image": "/images/event_ancol.png",
+            "image": "/images/about_1.png",
             "category": "Clean Up"
         },
         {
@@ -188,7 +188,7 @@
             "time": "07:00 - 11:00 WIB",
             "location": "River Ciliwung",
             "quota": "80/150 participants",
-            "image": "/images/event_river.png",
+            "image": "/images/program_waste.jpeg",
             "category": "Clean Up"
         }
     ],
@@ -231,7 +231,7 @@
             "author": "David Chen",
             "date": "November 10, 2025",
             "excerpt": "Join us for a morning of environmental action as we clean up Ancol Beach and help protect marine life.",
-            "image": "/images/about_1.png"
+            "image": "/images/journey_hero.png"
         },
         {
             "id": 5,

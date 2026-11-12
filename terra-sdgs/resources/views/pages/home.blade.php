@@ -7,20 +7,24 @@
 <!-- 1. HERO SECTION (Figma: w=1440, h=740, Inner Hero w=1416, h=716, Frame 2 at bottom y=406) -->
 <section class="w-full pt-2 pb-6 md:pb-10">
     <div class="max-w-[1416px] mx-auto px-4 md:px-6">
-        <div class="relative overflow-hidden rounded-[32px] h-[calc(100vh-104px)] min-h-[520px] max-h-[720px] flex flex-col justify-end p-6 md:p-10 lg:p-14 shadow-2xl">
-            <!-- Background Image -->
-            <img src="{{ asset($landing['hero']['image']) }}" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover">
-            <!-- Rich dark contrast gradient overlay covering the bottom 65% of the hero -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/80 via-55% to-transparent z-10"></div>
+        <div class="relative overflow-hidden rounded-[32px] h-[calc(100vh-104px)] min-h-[560px] max-h-[740px] flex flex-col justify-end p-6 md:p-12 lg:p-16 shadow-2xl bg-[#131713]">
+            <!-- Hero Visual: Center Tree & Atmospheric Glow -->
+            <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+                <img src="{{ asset($landing['hero']['image']) }}" alt="Terra Nature Canopy" class="w-full h-full object-cover object-center scale-105 filter brightness-90">
+            </div>
+            
+            <!-- Rich layered gradient overlay to guarantee text legibility without obscuring the tree artwork -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#131713] via-[#131713]/70 via-45% to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#131713]/80 via-transparent to-transparent z-10"></div>
 
             <!-- Frame 2 (Figma: bottom row with headline on left, Join Now on right) -->
-            <div class="relative z-20 w-full flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+            <div class="relative z-20 w-full flex flex-col md:flex-row md:items-end justify-between gap-8 pb-2">
                 <!-- Frame 1 (w=871, h=216): H1 + Subtitle -->
                 <div class="flex flex-col gap-3 md:gap-4 max-w-[871px]">
-                    <h1 class="font-heading font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[62px] text-white leading-[1.12] tracking-tight">
+                    <h1 class="font-heading font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[62px] text-white leading-[1.12] tracking-tight drop-shadow-sm">
                         {{ $landing['hero']['headline'] }}
                     </h1>
-                    <p class="text-neutral-200 text-base sm:text-lg md:text-xl lg:text-[22px] font-normal leading-relaxed max-w-[791px]">
+                    <p class="text-neutral-200 text-base sm:text-lg md:text-xl lg:text-[22px] font-normal leading-relaxed max-w-[791px] drop-shadow-sm">
                         {{ $landing['hero']['subheadline'] }}
                     </p>
                 </div>
@@ -79,32 +83,32 @@
                 </div>
             </div>
 
-            <!-- Center: Big Landscape Image (Frame 170, w=726, h=450) -->
+            <!-- Center: Big Landscape Image (Frame 170, w=720, h=512 in Figma) -->
             <div class="w-full lg:w-[726px] overflow-hidden rounded-[32px] h-[320px] sm:h-[380px] lg:h-[450px] shadow-lg shrink-0">
                 <img src="{{ asset('images/about_1.png') }}" alt="Terra Community" class="w-full h-full object-cover">
             </div>
 
             <!-- Right Stack: 2 Stat Cards (Frame 172, w=237) -->
             <div class="w-full lg:w-[240px] flex flex-col sm:flex-row lg:flex-col gap-6 shrink-0">
-                <!-- Card 3: 1,200+ Active volunteer -->
+                <!-- Card 3: 1,200+ Active volunteers -->
                 <div class="p-6 rounded-[24px] bg-white border border-neutral-100 shadow-sm flex flex-col items-center text-center gap-3 w-full h-[178px] justify-center hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 flex items-center justify-center">
                         <img src="{{ asset('svgs/icon_volunteer.svg') }}" alt="Volunteer" class="w-10 h-10">
                     </div>
                     <div>
                         <div class="font-heading font-bold text-[32px] text-[#0F0F0F] leading-tight">1,200+</div>
-                        <div class="text-[#646464] text-[18px] font-normal">Active volunteer</div>
+                        <div class="text-[#646464] text-[18px] font-normal">Active volunteers</div>
                     </div>
                 </div>
 
-                <!-- Card 4: 50+ Educated School -->
+                <!-- Card 4: 50+ Schools Educated -->
                 <div class="p-6 rounded-[24px] bg-white border border-neutral-100 shadow-sm flex flex-col items-center text-center gap-3 w-full h-[178px] justify-center hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 flex items-center justify-center">
                         <img src="{{ asset('svgs/icon_school.svg') }}" alt="School" class="w-10 h-10">
                     </div>
                     <div>
                         <div class="font-heading font-bold text-[32px] text-[#0F0F0F] leading-tight">50+</div>
-                        <div class="text-[#646464] text-[18px] font-normal">Educated School</div>
+                        <div class="text-[#646464] text-[18px] font-normal">Schools Educated</div>
                     </div>
                 </div>
             </div>
@@ -186,9 +190,9 @@
                 <div class="rounded-[24px] overflow-hidden bg-white border border-neutral-100 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all duration-300 group">
                     <div>
                         <!-- Top Image (h=451 in Figma) with Registration is open badge -->
-                        <div class="relative h-[340px] md:h-[400px] overflow-hidden">
+                        <div class="relative h-[340px] md:h-[400px] overflow-hidden bg-neutral-100">
                             <img src="{{ asset($event['image']) }}" alt="{{ $event['title'] }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-5 left-5 px-5 py-2 rounded-full bg-white text-[#5E745D] font-heading font-normal text-[16px] shadow-sm">
+                            <span class="absolute top-5 left-5 px-5 py-2 rounded-full bg-white/95 backdrop-blur-sm text-[#5E745D] font-heading font-normal text-[16px] shadow-sm">
                                 Registration is open
                             </span>
                         </div>
@@ -256,7 +260,7 @@
                     </div>
 
                     <!-- Middle: Square Image (Rectangle 33 in Figma: w=280, h=300) -->
-                    <div class="overflow-hidden rounded-2xl w-[280px] h-[260px] md:h-[300px] shrink-0 shadow-sm">
+                    <div class="overflow-hidden rounded-2xl w-[280px] h-[260px] md:h-[300px] shrink-0 shadow-sm bg-neutral-100">
                         <img src="{{ asset($art['image']) }}" alt="{{ $art['title'] }}" class="w-full h-full object-cover">
                     </div>
 
