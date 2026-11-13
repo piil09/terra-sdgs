@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\EventRegistration;
 use App\Models\User;
 use App\Services\SiteDataService;
 use Illuminate\Http\Request;
@@ -82,10 +83,12 @@ class AdminController extends Controller
 
         $adminData = $this->data->get('admin');
         $events = Event::latest()->get();
+        $totalParticipants = EventRegistration::count();
         
         if (isset($adminData['stats'])) {
             $adminData['stats'][0]['value'] = (string)$events->count();
             $adminData['stats'][0]['period'] = $events->where('status', 'Registration is open')->count() . ' aktif, ' . $events->where('status', '!=', 'Registration is open')->count() . ' selesai';
+            $adminData['stats'][1]['value'] = (string)$totalParticipants;
         }
 
         return view('admin.dashboard', [
@@ -167,9 +170,13 @@ class AdminController extends Controller
     {
         if ($redirect = $this->checkAuth()) return $redirect;
 
+        $adminData = $this->data->get('admin');
+        $participants = EventRegistration::latest()->get();
+
         return view('admin.participants', [
             'site' => $this->data->site(),
-            'admin' => $this->data->get('admin'),
+            'admin' => $adminData,
+            'participants_list' => $participants,
             'adminUser' => session('terra_admin_user'),
             'activeNav' => 'participants'
         ]);

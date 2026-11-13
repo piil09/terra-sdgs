@@ -3,10 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Event;
+use App\Models\EventRegistration;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -93,6 +93,43 @@ class DatabaseSeeder extends Seeder
                 ['slug' => $ev['slug']],
                 $ev
             );
+        }
+
+        // 4. Seed initial participants if empty
+        if (EventRegistration::count() == 0) {
+            EventRegistration::create([
+                'full_name' => 'Sarah Amalia',
+                'email' => 'sarah.amalia@gmail.com',
+                'phone' => '082198765432',
+                'city' => 'Jakarta',
+                'occupation' => 'Karyawan Swasta',
+                'gender' => 'Female',
+                'interest' => 'Beach Clean-up at Ancol',
+                'status' => 'Terverifikasi',
+                'volunteer_experience' => 'Pernah aktif di komunitas bersih pantai Jakarta.',
+            ]);
+            EventRegistration::create([
+                'full_name' => 'Budi Santoso',
+                'email' => 'budi.santoso@yahoo.com',
+                'phone' => '081377889900',
+                'city' => 'Surabaya',
+                'occupation' => 'Wirausaha',
+                'gender' => 'Male',
+                'interest' => 'Zero Waste Living Workshop',
+                'status' => 'Terverifikasi',
+                'volunteer_experience' => 'Memiliki usaha pengolahan limbah kertas.',
+            ]);
+            EventRegistration::create([
+                'full_name' => 'Dewi Sartika',
+                'email' => 'dewi.sartika@gmail.com',
+                'phone' => '085611223344',
+                'city' => 'Denpasar',
+                'occupation' => 'Aktivis Lingkungan',
+                'gender' => 'Female',
+                'interest' => 'Penanaman 1.000 Mangrove Teluk Benoa',
+                'status' => 'Terverifikasi',
+                'volunteer_experience' => 'Edukator mangrove Bali.',
+            ]);
         }
     }
 }

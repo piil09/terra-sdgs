@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use App\Models\EventRegistration;
 use App\Models\User;
 use App\Services\SiteDataService;
@@ -80,9 +81,18 @@ class SiteController extends Controller
             'volunteer_experience' => 'nullable|string',
         ]);
 
-        EventRegistration::create($validated);
+        $validated['status'] = 'Terverifikasi';
 
-        return redirect()->route('events.register')->with('success', 'Selamat! Pendaftaran relawan Anda berhasil dicatat. Tim Terra akan menghubungi Anda melalui WhatsApp/Email.');
+        // 1. Save directly into live database
+        $registration = EventRegistration::create($validated);
+
+        // 2. Increment registered_count on matching event
+        $event = Event::where('title', $validated['interest'])->first();
+        if ($event) {
+            $event->increment('registered_count');
+        }
+
+        return redirect()->route('events.register')->with('success', 'Selamat! Pendaftaran relawan Anda berhasil dicatat dan langsung masuk ke sistem portal admin Terra.');
     }
 
     public function articles(Request $request)
@@ -130,12 +140,8 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Show Regular User Login Page
-     */
     public function login()
     {
-        // If already has valid regular user token, redirect to profile
         if (session('terra_user_token') && session('terra_user_role') === 'user') {
             return redirect()->route('user.profile');
         }
@@ -149,9 +155,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Process Regular User Login (strictly user credentials)
-     */
     public function processUserLogin(Request $request)
     {
         $request->validate([
@@ -164,12 +167,9 @@ class SiteController extends Controller
 
         $user = User::where('email', $email)->first();
 
-        // Must be a regular user
         if ($user && $user->role === 'user' && Hash::check($password, $user->password)) {
-            // Generate distinct user token
             $userToken = 'usr_' . Str::random(40);
 
-            // Set exclusive user session variables
             session([
                 'terra_user_token' => $userToken,
                 'terra_user_role' => 'user',
@@ -184,7 +184,6 @@ class SiteController extends Controller
             return redirect()->route('user.profile')->with('success', 'Selamat datang kembali, ' . $user->name . '!');
         }
 
-        // If user exists but is an admin trying to login via public user portal
         if ($user && $user->role === 'admin') {
             return back()->with('error', 'Akses ditolak: Akun ini adalah Administrator. Silakan login melalui Portal Admin di /admin/login.');
         }
@@ -192,13 +191,10 @@ class SiteController extends Controller
         return back()->with('error', 'Kombinasi email atau kata sandi tidak sesuai.');
     }
 
-    /**
-     * Regular User Profile / Dashboard Area
-     */
     public function userProfile()
     {
         $userData = session('terra_user_data');
-        $myRegistrations = EventRegistration::where('email', $userData['email'] ?? '')->get();
+        $myRegistrations = EventRegistration::where('email', $userData['email'] ?? '')->latest()->get();
 
         return view('pages.profile', [
             'site' => $this->data->site(),
@@ -209,9 +205,6 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Regular User Logout
-     */
     public function userLogout()
     {
         session()->forget(['terra_user_token', 'terra_user_role', 'terra_user_data']);

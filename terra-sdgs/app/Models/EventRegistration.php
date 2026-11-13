@@ -15,6 +15,7 @@ class EventRegistration extends Model
         'occupation',
         'gender',
         'interest',
+        'status',
         'volunteer_experience',
     ];
 }
