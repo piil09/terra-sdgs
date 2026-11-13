@@ -135,16 +135,16 @@
                         </div>
                     </div>
 
-                    <!-- Environmental Interest -->
+                    <!-- Environmental Interest / Live Event -->
                     <div class="flex flex-col gap-2">
                         <label for="interest" class="text-sm font-medium text-[#131713]">
-                            Environmental Interest / Event <span class="text-red-500">*</span>
+                            Pilih Kegiatan / Event <span class="text-red-500">*</span>
                         </label>
                         <select id="interest" name="interest" required
                                 class="w-full px-4 py-3.5 rounded-xl bg-white border border-neutral-300 focus:border-[#5E745D] focus:ring-2 focus:ring-[#5E745D]/20 outline-none transition-all text-base">
-                            @foreach($registration['interests'] ?? [] as $interest)
-                                <option value="{{ $interest }}" {{ (old('interest') === $interest || ($selectedEvent && str_contains($selectedEvent['title'], $interest))) ? 'selected' : '' }}>
-                                    {{ $interest }}
+                            @foreach($events ?? [] as $ev)
+                                <option value="{{ $ev['title'] }}" {{ (old('interest') === $ev['title'] || ($selectedEvent && $selectedEvent['id'] == $ev['id'])) ? 'selected' : '' }}>
+                                    {{ $ev['title'] }} ({{ $ev['date'] }})
                                 </option>
                             @endforeach
                         </select>

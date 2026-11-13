@@ -112,15 +112,15 @@
         </div>
     </div>
 
-    <!-- Bottom Section: Daftar Event Aktif & Pendaftar Terkini -->
+    <!-- Bottom Section: Live Events Table Connected to Admin -->
     <div class="bg-white rounded-2xl border border-[#E5E7EB] shadow-sm overflow-hidden">
         <div class="p-5 border-b border-neutral-100 flex items-center justify-between">
             <div>
-                <h2 class="text-sm font-bold text-[#131713]">Event & Pendaftar Terkini</h2>
-                <p class="text-xs text-neutral-400">Status kuota kegiatan yang sedang berjalan</p>
+                <h2 class="text-sm font-bold text-[#131713]">Event Terdaftar di Sistem</h2>
+                <p class="text-xs text-neutral-400">Data sinkron langsung dengan website publik Terra SDGs</p>
             </div>
             <a href="{{ route('admin.events') }}" class="text-xs font-semibold text-[#5E745D] hover:bg-[#EBF2EA] px-3 py-1.5 rounded-lg transition-colors">
-                Lihat Semua Event &rarr;
+                Kelola Semua Event &rarr;
             </a>
         </div>
 
@@ -136,16 +136,25 @@
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-neutral-100 text-xs">
-                    @foreach($admin['events_list'] as $event)
+                    @forelse($events_list as $event)
                     <tr class="hover:bg-[#F9FAF9]/50 transition-colors">
                         <td class="py-4 px-6">
                             <div class="flex items-center gap-3">
-                                <img src="{{ $event['image'] }}" alt="{{ $event['title'] }}" class="w-10 h-10 rounded-xl object-cover border border-neutral-200 shrink-0">
+                                <img src="{{ asset($event['image']) }}" alt="{{ $event['title'] }}" class="w-10 h-10 rounded-xl object-cover border border-neutral-200 shrink-0">
                                 <span class="font-bold text-[#131713]">{{ $event['title'] }}</span>
                             </div>
                         </td>
                         <td class="py-4 px-6">
-                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-neutral-100 text-neutral-700">
+                            @php
+                                $catBadge = match($event['category']) {
+                                    'Clean Up' => 'bg-blue-50 text-blue-700 border-blue-200/60',
+                                    'Workshop' => 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
+                                    'Reboisasi' => 'bg-amber-50 text-amber-700 border-amber-200/60',
+                                    'Edukasi' => 'bg-purple-50 text-purple-700 border-purple-200/60',
+                                    default => 'bg-neutral-100 text-neutral-700 border-neutral-200'
+                                };
+                            @endphp
+                            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold border {{ $catBadge }}">
                                 {{ $event['category'] }}
                             </span>
                         </td>
@@ -154,22 +163,24 @@
                             <div class="text-neutral-400 text-[11px]">{{ $event['location'] }}</div>
                         </td>
                         <td class="py-4 px-6">
-                            <div class="font-bold text-[#131713]">{{ $event['registered'] }} / {{ $event['quota'] }}</div>
+                            <div class="font-bold text-[#131713]">{{ $event['quota'] }}</div>
                             <div class="w-24 bg-neutral-100 h-1.5 rounded-full overflow-hidden mt-1">
-                                <div class="bg-[#5E745D] h-1.5 rounded-full" style="width: {{ round(($event['registered'] / $event['quota']) * 100) }}%"></div>
+                                <div class="bg-[#5E745D] h-1.5 rounded-full" style="width: 70%"></div>
                             </div>
                         </td>
                         <td class="py-4 px-6">
-                            @if($event['status'] === 'Aktif')
-                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#EBF2EA] text-[#5E745D]">Aktif</span>
-                            @elseif($event['status'] === 'Penuh')
-                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-amber-50 text-amber-700">Penuh</span>
+                            @if(str_contains(strtolower($event['status']), 'open') || $event['status'] === 'Aktif')
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-[#EBF2EA] text-[#5E745D]">Open</span>
                             @else
-                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-neutral-100 text-neutral-600">Selesai</span>
+                                <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-neutral-100 text-neutral-600">{{ $event['status'] }}</span>
                             @endif
                         </td>
                     </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                        <td colspan="5" class="text-center py-8 text-neutral-400 text-xs">Belum ada event terdaftar.</td>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>

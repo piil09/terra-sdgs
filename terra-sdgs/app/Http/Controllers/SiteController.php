@@ -58,6 +58,7 @@ class SiteController extends Controller
         return view('pages.register_event', [
             'site' => $this->data->site(),
             'registration' => $this->data->get('registration'),
+            'events' => $this->data->events(),
             'selectedEvent' => $selectedEvent,
             'cta' => $this->data->get('landing.cta'),
             'assets' => $this->data->assets(),

@@ -2,6 +2,9 @@
 
 namespace App\Services;
 
+use App\Models\Event;
+use Illuminate\Support\Facades\Schema;
+
 class SiteDataService
 {
     protected ?array $tokens = null;
@@ -55,11 +58,29 @@ class SiteDataService
 
     public function events(): array
     {
+        try {
+            if (Schema::hasTable('events')) {
+                $dbEvents = Event::latest()->get()->toArray();
+                if (!empty($dbEvents)) {
+                    return $dbEvents;
+                }
+            }
+        } catch (\Throwable $e) {
+        }
         return $this->content()['events'] ?? [];
     }
 
     public function event(int $id): ?array
     {
+        try {
+            if (Schema::hasTable('events')) {
+                $ev = Event::find($id);
+                if ($ev) {
+                    return $ev->toArray();
+                }
+            }
+        } catch (\Throwable $e) {
+        }
         foreach ($this->events() as $event) {
             if ($event['id'] == $id) {
                 return $event;
