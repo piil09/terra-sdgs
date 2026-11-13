@@ -50,7 +50,7 @@
                 "route": "events.register",
                 "url": "/events/register"
             },
-            "image": "/images/hero_bg.png"
+            "image": "/images/program_waste.jpeg"
         },
         "about": {
             "badge": "About Us",

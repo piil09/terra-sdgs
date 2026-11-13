@@ -4,35 +4,32 @@
 @section('meta_description', $landing['hero']['subheadline'] ?? '')
 
 @section('content')
-<!-- 1. HERO SECTION (Figma: w=1440, h=740, Inner Hero w=1416, h=716, Frame 2 at bottom y=406) -->
-<section class="w-full pt-2 pb-6 md:pb-10">
+<!-- 1. HERO SECTION (Exact Figma Frame 1507:1154: w=1416, h=716) -->
+<section class="w-full pt-2 pb-6">
     <div class="max-w-[1416px] mx-auto px-4 md:px-6">
-        <div class="relative overflow-hidden rounded-[32px] h-[calc(100vh-104px)] min-h-[560px] max-h-[740px] flex flex-col justify-end p-6 md:p-12 lg:p-16 shadow-2xl bg-[#131713]">
-            <!-- Hero Visual: Center Tree & Atmospheric Glow -->
-            <div class="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-                <img src="{{ asset($landing['hero']['image']) }}" alt="Terra Nature Canopy" class="w-full h-full object-cover object-center scale-105 filter brightness-90">
-            </div>
+        <div class="relative overflow-hidden rounded-[32px] h-[716px] w-full flex flex-col justify-end p-8 md:p-12 lg:p-16 shadow-2xl bg-neutral-900">
+            <!-- Background Image: Swiss Alps mountain valley landscape (Exact Figma image: program_waste.jpeg) -->
+            <img src="{{ asset($landing['hero']['image']) }}" alt="Terra Nature Landscape" class="absolute inset-0 w-full h-full object-cover object-center">
             
-            <!-- Rich layered gradient overlay to guarantee text legibility without obscuring the tree artwork -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#131713] via-[#131713]/70 via-45% to-transparent z-10"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-[#131713]/80 via-transparent to-transparent z-10"></div>
+            <!-- Rich Dark Gradient Scrim across the bottom half to guarantee 100% WCAG AAA contrast -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 via-45% to-transparent z-10"></div>
 
-            <!-- Frame 2 (Figma: bottom row with headline on left, Join Now on right) -->
-            <div class="relative z-20 w-full flex flex-col md:flex-row md:items-end justify-between gap-8 pb-2">
-                <!-- Frame 1 (w=871, h=216): H1 + Subtitle -->
-                <div class="flex flex-col gap-3 md:gap-4 max-w-[871px]">
-                    <h1 class="font-heading font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[62px] text-white leading-[1.12] tracking-tight drop-shadow-sm">
+            <!-- Frame 2: Bottom row anchored at bottom-left and bottom-right -->
+            <div class="relative z-20 w-full flex flex-col md:flex-row justify-between gap-8 pb-2" style="align-items: flex-end;">
+                <!-- Frame 1: H1 + Subtitle -->
+                <div class="flex flex-col gap-4 max-w-[840px]">
+                    <h1 class="font-heading font-medium text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-white leading-[1.12] tracking-tight">
                         {{ $landing['hero']['headline'] }}
                     </h1>
-                    <p class="text-neutral-200 text-base sm:text-lg md:text-xl lg:text-[22px] font-normal leading-relaxed max-w-[791px] drop-shadow-sm">
+                    <p class="text-white text-base sm:text-lg md:text-xl lg:text-[22px] font-normal leading-relaxed max-w-[760px] opacity-95">
                         {{ $landing['hero']['subheadline'] }}
                     </p>
                 </div>
 
-                <!-- Right Button (Figma: w=127, h=51, Join Now, bg #5E745D) -->
-                <div class="shrink-0 mb-1">
+                <!-- Right Button: Join Now (Figma: w=127, h=51, bg #5E745D) -->
+                <div class="shrink-0">
                     <a href="{{ route('events.register') }}" 
-                       class="px-8 py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-base md:text-[18px] shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 inline-flex items-center justify-center">
+                       class="px-9 py-4 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-base md:text-[18px] shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95 inline-flex items-center justify-center">
                         {{ $landing['hero']['cta_primary']['label'] ?? 'Join Now' }}
                     </a>
                 </div>
