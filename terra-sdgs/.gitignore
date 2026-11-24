@@ -30,3 +30,10 @@ Thumbs.db
 PRD_Terra_SDGs.docx
 ERD_Terra_SDGs.drawio
 ERD_Terra_SDGs*.png
+
+# Local verification artifacts and reports
+public/images/*_verified.*
+public/images/figma_*.png
+public/images/proof_*.png
+*laporan*
+*report*

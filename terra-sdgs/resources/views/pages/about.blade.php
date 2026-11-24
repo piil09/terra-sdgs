@@ -26,9 +26,9 @@
 
             <!-- Dual Buttons: Left is light gray pill, Right is green pill (Exact image_071c22.png styling) -->
             <div class="flex items-center justify-center gap-4 mt-8">
-                <a href="{{ route('events') }}" 
+                <a href="{{ route('events.register') }}" 
                    class="px-8 py-3.5 rounded-full bg-[#F3F4F6] hover:bg-[#E5E7EB] text-[#111827] font-heading font-bold text-base transition-all duration-200 active:scale-95 shadow-sm">
-                    Donate Us
+                    Join Volunteer
                 </a>
                 <a href="{{ route('login') }}" 
                    class="px-8 py-3.5 rounded-full bg-[#5E745D] hover:bg-[#4B5D4A] text-white font-heading font-bold text-base transition-all duration-200 active:scale-95 shadow-md">

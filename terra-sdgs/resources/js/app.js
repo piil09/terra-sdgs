@@ -28,59 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    // Donation amount selector
-    const amountBtns = document.querySelectorAll('.donate-amount-btn');
-    const customAmountInput = document.getElementById('custom-amount-input');
-    const selectedAmountInput = document.getElementById('selected-amount-input');
-
-    if (amountBtns.length && customAmountInput && selectedAmountInput) {
-        amountBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                amountBtns.forEach(b => {
-                    b.classList.remove('bg-[#5E745D]', 'text-white', 'border-[#5E745D]');
-                    b.classList.add('bg-white', 'text-neutral-800', 'border-neutral-300');
-                });
-                btn.classList.remove('bg-white', 'text-neutral-800', 'border-neutral-300');
-                btn.classList.add('bg-[#5E745D]', 'text-white', 'border-[#5E745D]');
-
-                const val = btn.dataset.value;
-                selectedAmountInput.value = val;
-                customAmountInput.value = val;
-            });
-        });
-
-        customAmountInput.addEventListener('input', () => {
-            selectedAmountInput.value = customAmountInput.value;
-            amountBtns.forEach(b => {
-                b.classList.remove('bg-[#5E745D]', 'text-white', 'border-[#5E745D]');
-                b.classList.add('bg-white', 'text-neutral-800', 'border-neutral-300');
-            });
-        });
-    }
-
-    // Donation Program selection badges
-    const programBadges = document.querySelectorAll('.donate-program-badge');
-    const selectedProgramInput = document.getElementById('selected-program-id');
-    const selectedProgramNameInput = document.getElementById('selected-program-name');
-
-    if (programBadges.length && selectedProgramInput) {
-        programBadges.forEach(badge => {
-            badge.addEventListener('click', () => {
-                programBadges.forEach(b => {
-                    b.classList.remove('border-[#5E745D]', 'bg-[#EBF2EA]', 'ring-2', 'ring-[#5E745D]');
-                    b.classList.add('border-neutral-200', 'bg-white');
-                });
-                badge.classList.remove('border-neutral-200', 'bg-white');
-                badge.classList.add('border-[#5E745D]', 'bg-[#EBF2EA]', 'ring-2', 'ring-[#5E745D]');
-
-                selectedProgramInput.value = badge.dataset.id;
-                if (selectedProgramNameInput) {
-                    selectedProgramNameInput.value = badge.dataset.name;
-                }
-            });
-        });
-    }
-
     // Article Category tab switcher
     const categoryTabs = document.querySelectorAll('.article-category-tab');
     const articleCards = document.querySelectorAll('.article-item-card');

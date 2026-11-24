@@ -1,166 +1,113 @@
 # Terra SDGs
 
-A Laravel-based platform for Sustainable Development Goals (SDGs) with event registration, donation campaigns, and educational articles.
+Website Laravel untuk kegiatan lingkungan Terra SDGs. Repository ini berisi **source code aplikasi saja**; dokumen PRD, ERD, dan laporan disimpan di luar repository ini.
 
-## Overview
+## Fitur
 
-Terra SDGs is a web application designed to promote and support Sustainable Development Goals through:
-- **Event Management**: Host and register for SDG-related events
-- **Donation System**: Collect donations for SDG initiatives
-- **Educational Content**: Articles and resources about sustainability
-- **Community Building**: Connect volunteers and organizations
+- Landing page publik, About Us, Event, dan Article.
+- Pendaftaran relawan untuk event.
+- Portal user dengan login dan profile.
+- Portal admin terpisah dengan login wajib.
+- Role-based access: akun `admin` dan `user` tidak dapat saling mengakses portal.
+- Manajemen event, peserta, artikel, pengguna/admin, dan log aktivitas.
+- Data event dan pendaftaran peserta tersimpan di database SQLite.
+- Token desain, konten, dan mapping aset dipisahkan di `resources/data/`.
 
-## Features
+## Teknologi
 
-### Core Functionality
+- PHP 8.3+
+- Laravel 13
+- SQLite (default lokal)
+- Vite, Tailwind CSS, Lucide, Motion
+- Blade templates
 
-- 🎯 **Event Registration System**
-  - Browse upcoming events
-  - Register for events with comprehensive form
-  - Track volunteer registrations
+## Menjalankan Setelah Clone
 
-- 💰 **Donation Management**
-  - Multiple donation campaigns
-  - Secure donation processing
-  - Campaign progress tracking
+```bash
+git clone https://github.com/piil09/terra-sdgs.git
+cd terra-sdgs/terra-sdgs
 
-- 📚 **Educational Articles**
-  - Categorized articles on SDG topics
-  - Article detail pages
-  - Related content recommendations
-
-- 👥 **User Management**
-  - Authentication system
-  - Role-based access control
-  - User profiles
-
-### Database Schema
-
-The application uses a well-designed database schema with the following tables:
-
-| Table | Description |
-|-------|-------------|
-| `users` | Application users with authentication |
-| `events` | SDG-related events |
-| `event_registrations` | Volunteer registrations for events |
-| `donation_campaigns` | Fundraising campaigns |
-| `donations` | Individual donations to campaigns |
-| `article_categories` | Categories for educational content |
-| `articles` | Educational articles about SDGs |
-
-## ERD Diagram
-
-The complete Entity Relationship Diagram is available in:
-- **Draw.io Format**: `ERD_Terra_SDGs.drawio` (editable in diagrams.net)
-- **PNG Format**: `ERD_Terra_SDGs.png` and `ERD_Terra_SDGs_CrowsFoot.png`
-
-The ERD shows all database relationships using Crow's Foot notation for the physical model and Chen notation for the conceptual model.
-
-## Getting Started
-
-### Prerequisites
-
-- PHP 8.0+
-- Composer
-- Node.js 16+
-- MySQL or SQLite
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/muhgavril/terra-sdgs.git
-   cd terra-sdgs
-   ```
-
-2. **Install PHP dependencies**
-   ```bash
-   composer install
-   ```
-
-3. **Install Node.js dependencies**
-   ```bash
-   npm install
-   ```
-
-4. **Set up environment**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your database credentials
-   ```
-
-5. **Configure database**
-   ```bash
-   php artisan migrate
-   php artisan db:seed
-   ```
-
-6. **Build frontend assets**
-   ```bash
-   npm run dev
-   ```
-
-7. **Start development server**
-   ```bash
-   php artisan serve
-   ```
-
-8. **Visit the application**
-   ```
-   http://localhost:8000
-   ```
-
-## Project Structure
-
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+npm run build
+php artisan storage:link
+php artisan serve --host=127.0.0.1 --port=8000
 ```
+
+Buka `http://127.0.0.1:8000`.
+
+> Jangan commit `.env`, kredensial, folder `vendor/`, `node_modules/`, atau hasil runtime. `.env.example` adalah template konfigurasi yang aman untuk dibagikan.
+
+## Akun Seed Lokal
+
+Seeder membuat akun development untuk pengujian lokal:
+
+- Admin: `admin@terra-sdgs.id` / `admin123`
+- User: `user@terra-sdgs.id` / `user123`
+
+Ganti kredensial tersebut sebelum digunakan di lingkungan produksi.
+
+## URL Utama
+
+| URL | Keterangan |
+|---|---|
+| `/` | Landing page publik |
+| `/about` | About Us |
+| `/events` | Daftar event |
+| `/events/register` | Form pendaftaran event |
+| `/articles` | Daftar artikel |
+| `/login` | Login user |
+| `/profile` | Profile user setelah login |
+| `/admin/login` | Login admin |
+| `/admin` | Dashboard admin setelah login |
+| `/admin/events` | Manajemen event |
+| `/admin/participants` | Data peserta live |
+| `/admin/articles` | Manajemen artikel |
+| `/admin/users` | Manajemen pengguna/admin |
+| `/admin/logs` | Log aktivitas |
+
+## Struktur Repository
+
+```text
 terra-sdgs/
 ├── app/
-│   ├── Http/Controllers/     # SiteController, GreetController
-│   ├── Models/              # User, Donation, EventRegistration
-│   └── Services/            # SiteDataService
+│   ├── Http/Controllers/     # Logika request publik dan admin
+│   ├── Http/Middleware/      # AdminOnly dan UserOnly
+│   ├── Models/               # User, Event, EventRegistration
+│   └── Services/             # SiteDataService
 ├── database/
-│   ├── migrations/         # All SQL migrations
-│   └── seeders/           # Database seeds
-├── resources/views/         # Blade templates
-├── routes/                 # Route definitions
-├── ERD_Terra_SDGs.drawio    # Entity Relationship Diagram
-├── PRD_Terra_SDGs.docx     # Product Requirement Document
-└── README.md               # Project documentation
+│   ├── migrations/           # Struktur tabel database
+│   ├── seeders/              # Data awal development
+│   └── database.sqlite       # Database lokal development
+├── public/                   # Entry point dan aset publik
+├── resources/
+│   ├── data/                 # tokens, content, assets JSON
+│   ├── js/                   # Interaksi frontend
+│   ├── css/                  # Styling frontend
+│   └── views/                # Blade pages, admin, layouts, components
+├── routes/web.php            # Semua route publik, user, dan admin
+├── tests/                    # Feature dan unit tests
+├── .env.example              # Template environment
+└── README.md
 ```
 
-## API Endpoints
+## Verifikasi Lokal
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Home page |
-| GET | `/about` | About page |
-| GET | `/events` | Events listing |
-| GET | `/events/register` | Event registration form |
-| POST | `/events/register` | Submit event registration |
-| GET | `/articles` | Articles listing |
-| GET | `/articles/{slug}` | Article detail page |
-| GET | `/donate` | Donation page |
-| POST | `/donate` | Submit donation |
-| GET | `/login` | Login page |
+```bash
+php artisan test
+npm run build
+php artisan route:list
+```
 
-## Contributing
+## Aturan Repository
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+- PRD, ERD, dan laporan tidak disimpan atau dipush ke repository source.
+- Screenshot verifikasi dan file sementara tidak menjadi dependency aplikasi.
+- Jangan mengubah `.env.example` menjadi `.env` lalu commit file tersebut.
 
-## License
+## Lisensi dan Kontak
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-**Gavril Muhammad Ghazanfar**
-- Email: muhgavril@gmail.com
-- GitHub: @muhgavril
-
-## Acknowledgments
-
-- Laravel framework
-- SDG framework by United Nations
+Project ini dikembangkan untuk Terra SDGs oleh Gavril Muhammad Ghazanfar.
