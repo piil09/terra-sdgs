@@ -25,3 +25,8 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Project documentation kept outside the source repository
+PRD_Terra_SDGs.docx
+ERD_Terra_SDGs.drawio
+ERD_Terra_SDGs*.png
